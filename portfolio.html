@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purnaditya Suvvari — Data Analyst | Aspiring Data Engineer</title>
+    <meta name="description" content="Portfolio of Purnaditya Suvvari: Data Analyst transitioning to Data Engineering. Specializing in Power BI, SQL, and data automation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="a.css">
+</head>
+<body>
+    <!-- Background Grid & Canvas -->
+    <div class="bg-grid"></div>
+    <canvas id="data-network"></canvas>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">Purnaditya Suvvari</a>
+            <button class="menu-toggle" id="mobile-menu" type="button" aria-label="Open navigation menu" aria-controls="nav-menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="section">
+        <div class="container hero-layout">
+            <div class="hero-visual">
+                <div class="portrait-frame">
+                    <img class="portrait-image" src="portfolioImage.png" alt="Portrait of Purnaditya Suvvari">
+                </div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-copy">
+                    <p class="hero-status"><span class="status-dot"></span> DATA ANALYST <span aria-hidden="true">&middot;</span> DATA ENGINEER</p>
+                    <h1 class="hero-title">I turn complex data into clear insights and systems that scale.</h1>
+                </div>
+                <div class="hero-detail">
+                    <p class="hero-summary">
+                        I build analytics solutions and automate data workflows with SQL, Power BI, and thoughtful data modeling.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="mailto:purnadityasuvvari@gmail.com" class="btn btn-primary">Email me <span aria-hidden="true">&nearr;</span></a>
+                        <a href="#projects" class="hero-work-link">Explore my work <span aria-hidden="true">&darr;</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section reveal">
+        <div class="container">
+            <h2 class="section-title">The Engineering Perspective</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>I started my journey using data to answer critical business questions. Over the past 3+ years as a Power BI Senior Developer, I've designed enterprise-scale solutions for over 100 users and complex dimensional models.</p>
+                    <p>But building dashboards taught me a fundamental truth: <strong>analytics is only as good as the pipeline feeding it.</strong></p>
+                    <p>My focus has naturally shifted upstream. I am increasingly interested in the systems behind the data—optimizing SQL queries for 50% performance gains, orchestrating pipelines with Power Automate to eliminate manual work, and managing data quality. I am deliberately expanding my skillset in Python and cloud platforms to build robust data engineering architectures at scale.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <h3 class="stat-number">3+</h3>
+                        <p class="stat-label">Years Enterprise Exp.</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="stat-number">60%</h3>
+                        <p class="stat-label">Manual Work Reduced via Automation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Journey -->
+    <section id="journey" class="section reveal">
+        <div class="container">
+            <h2 class="section-title">My Data Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="mono-label">Foundation</span>
+                        <h3>Data Analysis & BI</h3>
+                        <p>Mastered complex DAX, Power Query, and visualization design to deliver actionable insights.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="mono-label">Modeling</span>
+                        <h3>SQL & Dimensional Modeling</h3>
+                        <p>Designed star schemas and optimized T-SQL stored procedures, improving reporting performance significantly.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="mono-label">Orchestration</span>
+                        <h3>Workflow Automation</h3>
+                        <p>Leveraged Power Automate to build end-to-end refresh pipelines, integrating multiple source systems seamlessly.</p>
+                    </div>
+                </div>
+                <div class="timeline-item current">
+                    <div class="timeline-dot pulse"></div>
+                    <div class="timeline-content">
+                        <span class="mono-label accent-text">Currently Developing</span>
+                        <h3>Data Engineering</h3>
+                        <p>Expanding into Python processing, Azure Data Factory, and scalable cloud data architectures to manage data lifecycle end-to-end.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section reveal">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-card">
+                <div class="exp-header">
+                    <div>
+                        <h3>Power BI Senior Developer | Enterprise Analytics</h3>
+                        <p class="exp-location">Hyderabad, IN</p>
+                    </div>
+                    <span class="mono-label">3+ Years</span>
+                </div>
+                <p class="exp-overview">Designed and deployed advanced analytics solutions, orchestrated automated data pipelines, and optimized SQL databases for enterprise decision-making.</p>
+                <ul class="exp-bullets">
+                    <li>Built and optimized SQL queries, stored procedures, and T-SQL scripts; <strong>improved query performance by 40-50%</strong> through indexing and execution plan analysis.</li>
+                    <li>Developed automated data refresh mechanisms using Power Automate, orchestrating pipelines from source to BI, <strong>reducing manual intervention by 60%</strong>.</li>
+                    <li>Architected data models following star schema best practices for complex hierarchical analytics.</li>
+                    <li>Delivered 15+ production dashboards supporting 100+ users across multiple enterprise departments.</li>
+                    <li>Implemented row-level security (RLS) and compliance frameworks for data governance.</li>
+                </ul>
+                <div class="exp-awards">
+                    <span class="badge badge-award">🏆 Valuable Performer Award (2024)</span>
+                    <span class="badge badge-award">🏆 Productivity Savings Champion (2025)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section reveal">
+        <div class="container">
+            <h2 class="section-title">Technical Projects</h2>
+            
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="engineering">Data Engineering / Pipelines</button>
+                <button class="filter-btn" data-filter="modeling">SQL & Modeling</button>
+                <button class="filter-btn" data-filter="analytics">Analytics & BI</button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="engineering analytics">
+                    <div class="project-content">
+                        <svg class="project-art project-art-flow" viewBox="0 0 360 112" aria-hidden="true">
+                            <path class="art-guide" d="M20 88H340M20 56H340M20 24H340"/>
+                            <path class="art-flow-line" d="M28 72C67 72 61 39 105 39S147 78 183 62s39-36 70-29 38 19 79-10"/>
+                            <circle class="art-point" cx="28" cy="72" r="4"/>
+                            <circle class="art-point" cx="105" cy="39" r="4"/>
+                            <circle class="art-point" cx="183" cy="62" r="4"/>
+                            <circle class="art-point" cx="253" cy="33" r="4"/>
+                            <circle class="art-point" cx="332" cy="23" r="4"/>
+                        </svg>
+                        <span class="mono-label">Automation & Pipeline</span>
+                        <h3>Automated KPI Refresh Pipeline</h3>
+                        <p class="project-desc">Architected an end-to-end automated data refresh solution combining Power Automate, scheduled refreshes, and SQL Server jobs to ingest data from multiple systems.</p>
+                        <ul class="project-metrics">
+                            <li>Latency reduced from <strong>4 hours to 15 minutes</strong></li>
+                            <li>Manual operations <strong>reduced by 60%</strong></li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span>Power Automate</span>
+                            <span>SQL Server</span>
+                            <span>T-SQL</span>
+                            <span>Power BI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-category="modeling analytics">
+                    <div class="project-content">
+                        <svg class="project-art project-art-model" viewBox="0 0 360 112" aria-hidden="true">
+                            <path class="art-model-line" d="M180 56 91 27M180 56 269 27M180 56 91 85M180 56 269 85"/>
+                            <rect class="art-table" x="145" y="38" width="70" height="36" rx="7"/>
+                            <rect class="art-table-subtle" x="47" y="12" width="88" height="30" rx="6"/>
+                            <rect class="art-table-subtle" x="225" y="12" width="88" height="30" rx="6"/>
+                            <rect class="art-table-subtle" x="47" y="70" width="88" height="30" rx="6"/>
+                            <rect class="art-table-subtle" x="225" y="70" width="88" height="30" rx="6"/>
+                            <circle class="art-point" cx="61" cy="27" r="3"/>
+                            <circle class="art-point" cx="239" cy="27" r="3"/>
+                            <circle class="art-point" cx="61" cy="85" r="3"/>
+                            <circle class="art-point" cx="239" cy="85" r="3"/>
+                            <path class="art-table-mark" d="M157 50h46M157 59h31"/>
+                        </svg>
+                        <span class="mono-label">Data Warehousing</span>
+                        <h3>Supply Chain Analytics Data Model</h3>
+                        <p class="project-desc">Designed a dimensional data warehouse supporting supply chain analytics. Created complex fact and dimension tables, optimizing SQL queries for strategic inventory planning.</p>
+                        <ul class="project-metrics">
+                            <li>Generated <strong>100-150 hours/year</strong> in time savings</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span>SQL Server</span>
+                            <span>Star Schema</span>
+                            <span>Power BI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-category="analytics">
+                    <div class="project-content">
+                        <svg class="project-art project-art-dashboard" viewBox="0 0 360 112" aria-hidden="true">
+                            <rect class="art-panel" x="30" y="12" width="300" height="88" rx="8"/>
+                            <path class="art-panel-line" d="M30 33h300"/>
+                            <circle class="art-point" cx="46" cy="23" r="3"/>
+                            <circle class="art-point-muted" cx="57" cy="23" r="3"/>
+                            <rect class="art-chart-bar" x="52" y="60" width="18" height="24" rx="3"/>
+                            <rect class="art-chart-bar" x="78" y="49" width="18" height="35" rx="3"/>
+                            <rect class="art-chart-bar" x="104" y="41" width="18" height="43" rx="3"/>
+                            <path class="art-flow-line" d="M166 77 189 62l21 8 29-24 22 10 31-19"/>
+                            <path class="art-panel-line" d="M166 84h136"/>
+                            <circle class="art-point" cx="239" cy="46" r="4"/>
+                        </svg>
+                        <span class="mono-label">Governance & BI</span>
+                        <h3>Enterprise Compliance Dashboard</h3>
+                        <p class="project-desc">Consolidated data from 5+ disparate source systems with advanced Power Query transformations and dynamic DAX logic to track 50+ compliance KPIs.</p>
+                        <ul class="project-metrics">
+                            <li>Manual reporting time <strong>reduced by 40-50%</strong></li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span>Power Query M</span>
+                            <span>DAX</span>
+                            <span>Row-Level Security</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Engineering Mindset / Architecture -->
+    <section id="mindset" class="section reveal">
+        <div class="container">
+            <h2 class="section-title">Engineering Mindset</h2>
+            <p class="section-subtitle">How I map my current stack to the modern data lifecycle.</p>
+            
+            <div class="architecture-flow">
+                <div class="arch-node">
+                    <div class="node-icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" fill="none">
+                            <path d="M16 4v15m0 0 6-6m-6 6-6-6M6 21v5a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5" />
+                        </svg>
+                    </div>
+                    <h4>Ingestion</h4>
+                    <span class="mono-tech">Power Automate</span>
+                    <span class="mono-tech">Python</span>
+                </div>
+                <div class="arch-line"></div>
+                <div class="arch-node">
+                    <div class="node-icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" fill="none">
+                            <path d="M7 8h18M7 16h18M7 24h18" />
+                            <circle cx="12" cy="8" r="2.5" />
+                            <circle cx="21" cy="16" r="2.5" />
+                            <circle cx="15" cy="24" r="2.5" />
+                        </svg>
+                    </div>
+                    <h4>Transformation</h4>
+                    <span class="mono-tech">T-SQL</span>
+                    <span class="mono-tech">Power Query M</span>
+                </div>
+                <div class="arch-line"></div>
+                <div class="arch-node">
+                    <div class="node-icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" fill="none">
+                            <ellipse cx="16" cy="7" rx="10" ry="4" />
+                            <path d="M6 7v18c0 2.2 4.5 4 10 4s10-1.8 10-4V7M6 16c0 2.2 4.5 4 10 4s10-1.8 10-4" />
+                        </svg>
+                    </div>
+                    <h4>Storage & Model</h4>
+                    <span class="mono-tech">SQL Server</span>
+                    <span class="mono-tech">Dataverse</span>
+                </div>
+                <div class="arch-line"></div>
+                <div class="arch-node">
+                    <div class="node-icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" fill="none">
+                            <path d="M5 27h23M8 24V15h5v9m3 0V8h5v16m3 0v-6h5v6" />
+                        </svg>
+                    </div>
+                    <h4>Analytics & BI</h4>
+                    <span class="mono-tech">Power BI</span>
+                    <span class="mono-tech">DAX</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section reveal">
+        <div class="container">
+            <h2 class="section-title">Technical Arsenal</h2>
+            <div class="skills-grid">
+                
+                <div class="skill-category">
+                    <h3>Data Engineering & DBs</h3>
+                    <div class="skill-badges">
+                        <span class="badge">SQL Server</span>
+                        <span class="badge">T-SQL</span>
+                        <span class="badge">Data Modeling</span>
+                        <span class="badge">Star Schema</span>
+                        <span class="badge">Stored Procedures</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Analytics & BI</h3>
+                    <div class="skill-badges">
+                        <span class="badge">Power BI</span>
+                        <span class="badge">DAX</span>
+                        <span class="badge">Power Query M</span>
+                        <span class="badge">Row-Level Security</span>
+                        <span class="badge">Advanced Excel</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Programming & Automation</h3>
+                    <div class="skill-badges">
+                        <span class="badge">Python (Data Processing)</span>
+                        <span class="badge">Power Automate</span>
+                        <span class="badge">VBA Macros</span>
+                        <span class="badge">Git</span>
+                    </div>
+                </div>
+
+                <div class="skill-category learning-category">
+                    <h3>Currently Exploring</h3>
+                    <div class="skill-badges">
+                        <span class="badge badge-outline">Azure Data Factory</span>
+                        <span class="badge badge-outline">Cloud Architectures</span>
+                        <span class="badge badge-outline">Scalable ETL</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume & Contact -->
+    <section id="contact" class="section reveal">
+        <div id="resume" class="container contact-container">
+            <h2 class="hero-title" style="font-size: 2.5rem; text-align: center;">Let's Build Better With Data.</h2>
+            <p class="hero-summary" style="text-align: center; margin: 0 auto 2rem auto;">
+                Currently exploring roles where I can leverage my deep analytical background while contributing to robust data engineering systems.
+            </p>
+            
+            <div class="contact-links">
+                <a href="mailto:purnadityasuvvari@gmail.com" class="btn btn-primary">Email Me</a>
+                <a href="https://linkedin.com/in/purnaditya-suvvari-6922aa244" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn</a>
+                <a href="assets/resume.pdf" class="btn btn-secondary" target="_blank">Download Resume</a>
+            </div>
+            
+            <div class="contact-info">
+                <p><span class="mono-label">Location:</span> Hyderabad, IN</p>
+                <p><span class="mono-label">Phone:</span> 8309868648</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-left">
+                <p class="nav-logo">PS<span class="accent">.</span></p>
+                <p class="mono-label">Data Analyst &rarr; Data Engineer</p>
+            </div>
+            <div class="footer-right">
+                <p>&copy; <span id="year"></span> Purnaditya Suvvari. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="portfolio.js"></script>
+</body>
+</html>
