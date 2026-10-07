@@ -550,6 +550,133 @@ button {
     gap: 1rem;
 }
 
+.skill-showcase {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(180px, 0.75fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.showcase-panel {
+    position: relative;
+    overflow: hidden;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background:
+        radial-gradient(circle at top right, rgba(52, 118, 87, 0.12), transparent 38%),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(243, 246, 240, 0.96));
+    box-shadow: 0 18px 48px rgba(31, 38, 33, 0.08);
+}
+
+.showcase-panel::before {
+    position: absolute;
+    inset: 1rem auto 1rem 1rem;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(52, 118, 87, 0.28), transparent);
+    content: "";
+}
+
+.showcase-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 0.9rem;
+    padding-left: 0.8rem;
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.showcase-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.42rem;
+    color: var(--text-primary);
+}
+
+.showcase-status::before {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-primary);
+    box-shadow: 0 0 12px rgba(52, 118, 87, 0.45);
+    content: "";
+}
+
+.showcase-visual {
+    width: 100%;
+    height: 210px;
+    display: block;
+    border-radius: 12px;
+    background: linear-gradient(180deg, rgba(240, 246, 241, 0.8), rgba(252, 251, 248, 0.96));
+}
+
+.showcase-outline {
+    fill: rgba(255, 255, 255, 0.75);
+    stroke: rgba(52, 118, 87, 0.18);
+    stroke-width: 1.2;
+}
+
+.showcase-gridline {
+    stroke: rgba(52, 118, 87, 0.12);
+    stroke-width: 1;
+    fill: none;
+}
+
+.showcase-curve {
+    fill: none;
+    stroke: #2b6f52;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.showcase-point {
+    fill: #f6faf7;
+    stroke: #2b6f52;
+    stroke-width: 2.5;
+}
+
+.showcase-bar {
+    fill: #dfe9e1;
+}
+
+.showcase-bar.alt {
+    fill: #8aa88d;
+}
+
+.showcase-stat-stack {
+    display: grid;
+    gap: 0.9rem;
+}
+
+.showcase-stat {
+    display: grid;
+    gap: 0.4rem;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(243, 245, 240, 0.94));
+}
+
+.showcase-stat strong {
+    color: var(--text-primary);
+    font-size: clamp(1.3rem, 2vw, 1.9rem);
+    letter-spacing: -0.06em;
+}
+
+.showcase-stat span {
+    color: var(--text-secondary);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
 .skill-category {
     padding: 1.35rem;
 }
@@ -1625,21 +1752,12 @@ body {
     overflow: hidden;
     position: relative;
     padding: 0;
-    background: #fcfbf8;
+    background: #fff;
     color: #141414;
 }
 
 #hero::before {
-    position: absolute;
-    z-index: 0;
-    inset: -8%;
-    background:
-        radial-gradient(ellipse 36% 66% at 50% 47%, rgba(214, 225, 210, 0.68), rgba(239, 238, 228, 0.62) 48%, transparent 100%),
-        radial-gradient(ellipse 54% 68% at 77% 35%, rgba(232, 225, 211, 0.56), transparent 100%),
-        radial-gradient(ellipse 58% 70% at 19% 32%, rgba(233, 237, 226, 0.55), transparent 100%);
-    content: "";
-    pointer-events: none;
-    animation: hero-atmosphere 24s ease-in-out infinite alternate;
+    display: none;
 }
 
 .hero-layout {
@@ -1662,6 +1780,16 @@ body {
     pointer-events: none;
 }
 
+.hero-data-canvas {
+    position: absolute;
+    z-index: 3;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.78;
+}
+
 .portrait-orbit,
 .portrait-caption,
 .portrait-float {
@@ -1670,6 +1798,7 @@ body {
 
 .portrait-frame {
     position: absolute;
+    z-index: 2;
     inset: 0;
     height: auto;
     overflow: visible;
@@ -1685,9 +1814,9 @@ body {
     background: linear-gradient(
         to bottom,
         transparent 0%,
-        rgba(252, 251, 248, 0.14) 30%,
-        rgba(252, 251, 248, 0.62) 72%,
-        #fcfbf8 100%
+        rgba(255, 255, 255, 0.14) 30%,
+        rgba(255, 255, 255, 0.62) 72%,
+        #fff 100%
     );
     content: "";
 }
@@ -1797,17 +1926,6 @@ body {
     padding-left: 0.2rem;
 }
 
-@keyframes hero-atmosphere {
-    from {
-        transform: scale(1) translateY(0);
-        opacity: 0.88;
-    }
-    to {
-        transform: scale(1.045) translateY(-0.5%);
-        opacity: 1;
-    }
-}
-
 @media (max-width: 700px) {
     #navbar,
     .nav-container {
@@ -1876,9 +1994,9 @@ body {
         background: linear-gradient(
             to bottom,
             transparent 0%,
-            rgba(252, 251, 248, 0.2) 30%,
-            rgba(252, 251, 248, 0.72) 72%,
-            #fcfbf8 100%
+            rgba(255, 255, 255, 0.2) 30%,
+            rgba(255, 255, 255, 0.72) 72%,
+            #fff 100%
         );
     }
 
@@ -2361,6 +2479,7 @@ footer {
     <header id="hero" class="section">
         <div class="container hero-layout">
             <div class="hero-visual">
+                <canvas class="hero-data-canvas" aria-hidden="true"></canvas>
                 <div class="portrait-frame">
                     <img class="portrait-image" src="portfolioImage.png" alt="Portrait of Purnaditya Suvvari">
                 </div>
@@ -2641,6 +2760,50 @@ footer {
     <section id="skills" class="section reveal">
         <div class="container">
             <h2 class="section-title">Technical Arsenal</h2>
+            <div class="skill-showcase">
+                <div class="showcase-panel">
+                    <div class="showcase-header">
+                        <span>Data Lifecycle</span>
+                        <span class="showcase-status">Live</span>
+                    </div>
+                    <svg class="showcase-visual" viewBox="0 0 520 210" aria-label="Illustrated data flow pipeline">
+                        <g>
+                            <path class="showcase-gridline" d="M35 40H485M35 90H485M35 140H485M35 190H485" />
+                            <path class="showcase-gridline" d="M80 20V190M160 20V190M240 20V190M320 20V190M400 20V190" />
+                            <rect class="showcase-outline" x="55" y="46" width="110" height="58" rx="12"/>
+                            <rect class="showcase-outline" x="206" y="32" width="120" height="72" rx="12"/>
+                            <rect class="showcase-outline" x="350" y="54" width="112" height="58" rx="12"/>
+                            <path class="showcase-curve" d="M165 75C190 75 190 75 206 75M280 104V152C280 168 290 178 306 178H342"/>
+                            <path class="showcase-curve" d="M350 88C326 88 322 112 288 112"/>
+                            <rect class="showcase-bar" x="80" y="126" width="18" height="46" rx="8"/>
+                            <rect class="showcase-bar alt" x="106" y="116" width="18" height="56" rx="8"/>
+                            <rect class="showcase-bar" x="132" y="104" width="18" height="68" rx="8"/>
+                            <rect class="showcase-bar alt" x="236" y="122" width="18" height="50" rx="8"/>
+                            <rect class="showcase-bar" x="264" y="112" width="18" height="60" rx="8"/>
+                            <rect class="showcase-bar alt" x="292" y="98" width="18" height="74" rx="8"/>
+                            <circle class="showcase-point" cx="165" cy="75" r="5"/>
+                            <circle class="showcase-point" cx="280" cy="104" r="5"/>
+                            <circle class="showcase-point" cx="344" cy="178" r="5"/>
+                            <circle class="showcase-point" cx="352" cy="88" r="5"/>
+                            <path class="showcase-curve" d="M58 168H450"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="showcase-stat-stack">
+                    <div class="showcase-stat">
+                        <strong>15+</strong>
+                        <span>Dashboards shipped</span>
+                    </div>
+                    <div class="showcase-stat">
+                        <strong>60%</strong>
+                        <span>Manual work cut</span>
+                    </div>
+                    <div class="showcase-stat">
+                        <strong>40-50%</strong>
+                        <span>Query improvement</span>
+                    </div>
+                </div>
+            </div>
             <div class="skills-grid">
                 
                 <div class="skill-category">
@@ -2772,6 +2935,188 @@ if (year) {
 }
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const heroCanvas = document.querySelector(".hero-data-canvas");
+const heroSection = document.querySelector("#hero");
+
+if (heroCanvas && heroSection) {
+    const context = heroCanvas.getContext("2d");
+
+    if (context) {
+        let width = 0;
+        let height = 0;
+        let pixelRatio = 1;
+        let animationFrame = 0;
+        let animationTime = 0;
+        let personSilhouette = null;
+        const particles = [];
+        const pointer = { x: 0.5, y: 0.5, active: false };
+
+        const drawConstellation = (animate) => {
+            context.clearRect(0, 0, width, height);
+
+            if (animate) {
+                animationTime += 0.016;
+            }
+
+            const pointerX = pointer.x * width;
+            const pointerY = pointer.y * height;
+            const isPersonArea = (x, y) => personSilhouette
+                && context.isPointInPath(personSilhouette, x, y);
+            const backgroundMask = new Path2D();
+            backgroundMask.rect(0, 0, width, height);
+            if (personSilhouette) backgroundMask.addPath(personSilhouette);
+
+            context.save();
+            context.clip(backgroundMask, "evenodd");
+
+            const pointerGlow = context.createRadialGradient(pointerX, pointerY, 0, pointerX, pointerY, 180);
+            pointerGlow.addColorStop(0, pointer.active ? "rgba(52, 118, 87, 0.055)" : "rgba(52, 118, 87, 0)");
+            pointerGlow.addColorStop(1, "rgba(52, 118, 87, 0)");
+            context.fillStyle = pointerGlow;
+            context.fillRect(0, 0, width, height);
+
+            if (animate) {
+                particles.forEach((particle) => {
+                    particle.x += particle.vx;
+                    particle.y += particle.vy;
+
+                    if (particle.y < 0.06 || particle.y > 0.94) particle.vy *= -1;
+                    if (particle.side === "left" && (particle.x < 0.015 || particle.x > 0.43)) particle.vx *= -1;
+                    if (particle.side === "right" && (particle.x < 0.57 || particle.x > 0.985)) particle.vx *= -1;
+                });
+            }
+
+            const projected = particles.map((particle) => {
+                const depthScale = 0.7 + particle.depth * 0.65;
+                const sideCenter = particle.side === "left" ? width * 0.19 : width * 0.81;
+                const x = sideCenter + (particle.x * width - sideCenter) * depthScale
+                    + (pointer.x - 0.5) * particle.depth * 24;
+                const y = height * 0.5 + (particle.y * height - height * 0.5) * depthScale
+                    + (pointer.y - 0.5) * particle.depth * 18;
+                const distance = Math.hypot(x - pointerX, y - pointerY);
+                const focus = pointer.active ? Math.max(0, 1 - distance / 190) : 0;
+                const pulse = 0.75 + Math.sin(animationTime * 1.4 + particle.phase) * 0.25;
+                return {
+                    ...particle,
+                    x,
+                    y,
+                    focus,
+                    radius: 0.85 + particle.depth * 1.25 + focus * 0.9,
+                    opacity: (0.16 + particle.depth * 0.22 + focus * 0.26) * pulse
+                };
+            });
+
+            for (let index = 0; index < projected.length; index += 1) {
+                const point = projected[index];
+                for (let nextIndex = index + 1; nextIndex < projected.length; nextIndex += 1) {
+                    const next = projected[nextIndex];
+                    if (point.side !== next.side) continue;
+
+                    const distance = Math.hypot(point.x - next.x, point.y - next.y);
+                    if (distance > 118) continue;
+                    const connectionAlpha = (1 - distance / 118)
+                        * (0.12 + Math.max(point.focus, next.focus) * 0.16);
+                    context.beginPath();
+                    context.moveTo(point.x, point.y);
+                    context.lineTo(next.x, next.y);
+                    context.strokeStyle = `rgba(52, 118, 87, ${connectionAlpha})`;
+                    context.lineWidth = 0.75;
+                    context.stroke();
+                }
+            }
+
+            projected.forEach((point) => {
+                context.beginPath();
+                context.arc(point.x, point.y, point.radius, 0, Math.PI * 2);
+                context.fillStyle = `rgba(52, 118, 87, ${point.opacity})`;
+                context.fill();
+            });
+
+            if (pointer.active && !isPersonArea(pointerX, pointerY)) {
+                context.beginPath();
+                context.arc(pointerX, pointerY, 12 + Math.sin(animationTime * 2) * 1.5, 0, Math.PI * 2);
+                context.strokeStyle = "rgba(52, 118, 87, 0.2)";
+                context.lineWidth = 0.7;
+                context.stroke();
+            }
+            context.restore();
+
+            if (animate) {
+                animationFrame = window.requestAnimationFrame(() => drawConstellation(true));
+            }
+        };
+
+        const resizeCanvas = () => {
+            const bounds = heroCanvas.getBoundingClientRect();
+            width = bounds.width;
+            height = bounds.height;
+            pixelRatio = Math.min(window.devicePixelRatio || 1, 1.5);
+            heroCanvas.width = Math.round(width * pixelRatio);
+            heroCanvas.height = Math.round(height * pixelRatio);
+            context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+
+            const shoulderHalfWidth = width < 600 ? 0.49 : 0.39;
+            const waistHalfWidth = width < 600 ? 0.44 : 0.33;
+            const headHalfWidth = width < 600 ? 0.19 : 0.17;
+            const neckY = width < 600 ? 0.42 : 0.53;
+            const shoulderTop = width < 600 ? 0.46 : 0.58;
+            const shoulderMid = width < 600 ? 0.58 : 0.68;
+            personSilhouette = new Path2D();
+            personSilhouette.moveTo(width * (0.5 - headHalfWidth), height * 0.065);
+            personSilhouette.bezierCurveTo(width * 0.34, height * 0.075, width * 0.33, height * 0.16, width * 0.34, height * 0.23);
+            personSilhouette.bezierCurveTo(width * 0.34, height * 0.32, width * 0.4, height * 0.38, width * 0.43, height * 0.415);
+            personSilhouette.bezierCurveTo(width * 0.43, height * 0.435, width * 0.4, height * 0.445, width * (0.5 - waistHalfWidth), height * neckY);
+            personSilhouette.bezierCurveTo(width * (0.5 - shoulderHalfWidth), height * shoulderTop, width * (0.5 - shoulderHalfWidth), height * shoulderMid, width * (0.5 - shoulderHalfWidth), height * 0.78);
+            personSilhouette.bezierCurveTo(width * (0.5 - shoulderHalfWidth), height * 0.88, width * (0.5 - waistHalfWidth), height * 0.93, width * (0.5 - waistHalfWidth), height);
+            personSilhouette.lineTo(width * (0.5 + waistHalfWidth), height);
+            personSilhouette.bezierCurveTo(width * (0.5 + waistHalfWidth), height * 0.93, width * (0.5 + shoulderHalfWidth), height * 0.88, width * (0.5 + shoulderHalfWidth), height * 0.78);
+            personSilhouette.bezierCurveTo(width * (0.5 + shoulderHalfWidth), height * shoulderMid, width * (0.5 + shoulderHalfWidth), height * shoulderTop, width * (0.5 + waistHalfWidth), height * neckY);
+            personSilhouette.bezierCurveTo(width * 0.6, height * 0.445, width * 0.57, height * 0.435, width * 0.57, height * 0.415);
+            personSilhouette.bezierCurveTo(width * 0.6, height * 0.38, width * 0.66, height * 0.32, width * 0.66, height * 0.23);
+            personSilhouette.bezierCurveTo(width * 0.67, height * 0.16, width * 0.66, height * 0.075, width * (0.5 + headHalfWidth), height * 0.065);
+            personSilhouette.closePath();
+
+            particles.length = 0;
+            const particleCount = Math.max(72, Math.min(156, Math.round(width / 8)));
+            for (let index = 0; index < particleCount; index += 1) {
+                const side = index % 2 === 0 ? "left" : "right";
+                particles.push({
+                    side,
+                    x: side === "left"
+                        ? 0.025 + Math.random() * 0.34
+                        : 0.635 + Math.random() * 0.34,
+                    y: 0.08 + Math.random() * 0.84,
+                    depth: 0.12 + Math.random() * 0.88,
+                    vx: (Math.random() - 0.5) * 0.00024,
+                    vy: (Math.random() - 0.5) * 0.00028,
+                    phase: Math.random() * Math.PI * 2
+                });
+            }
+
+            window.cancelAnimationFrame(animationFrame);
+            drawConstellation(!prefersReducedMotion);
+        };
+
+        heroSection.addEventListener("pointermove", (event) => {
+            const bounds = heroSection.getBoundingClientRect();
+            pointer.x = (event.clientX - bounds.left) / bounds.width;
+            pointer.y = (event.clientY - bounds.top) / bounds.height;
+            pointer.active = true;
+            if (prefersReducedMotion) drawConstellation(false);
+        }, { passive: true });
+
+        heroSection.addEventListener("pointerleave", () => {
+            pointer.x = 0.5;
+            pointer.y = 0.5;
+            pointer.active = false;
+            if (prefersReducedMotion) drawConstellation(false);
+        }, { passive: true });
+
+        window.addEventListener("resize", resizeCanvas, { passive: true });
+        resizeCanvas();
+    }
+}
+
 const motionTargets = document.querySelectorAll(
     ".section.reveal > .container > *, .stat-card, .timeline-item, .project-card, .arch-node, .skill-category"
 );
