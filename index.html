@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Purnaditya Suvvari — Data Analyst | Aspiring Data Engineer</title>
-    <meta name="description" content="Portfolio of Purnaditya Suvvari: Data Analyst transitioning to Data Engineering. Specializing in Power BI, SQL, and data automation.">
+    <title>Purnaditya Suvvari — Data Analytics &amp; Power BI Developer</title>
+    <meta name="description" content="Purnaditya Suvvari is a data analytics and Power BI developer with 3 years of experience, an MBA in Finance, and strengths in data modeling, design thinking, and business reporting.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -2451,6 +2451,852 @@ footer {
     }
 }
 
+/* A sharper aviation-inspired palette, keeping the existing editorial layout. */
+:root {
+    --bg-main: #fbfaf6;
+    --bg-alt: #f1f2ec;
+    --surface: #fffefa;
+    --border: #e1e4da;
+    --text-primary: #1b2927;
+    --text-secondary: #56635e;
+    --text-muted: #77817a;
+    --accent-primary: #1e6660;
+    --accent-secondary: #b9854d;
+    --accent-glow: rgba(30, 102, 96, 0.1);
+}
+
+body {
+    background: var(--bg-main);
+}
+
+#navbar {
+    background: rgba(251, 250, 246, 0.96);
+}
+
+#hero {
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(185, 133, 77, 0.1), transparent 48%),
+        #fbfaf6;
+}
+
+.hero-status {
+    color: #42534e;
+}
+
+.hero-title span {
+    color: var(--accent-primary);
+}
+
+.hero-credentials {
+    margin: 1rem 0 0;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.58rem;
+    letter-spacing: 0.045em;
+}
+
+.hero-credentials span {
+    padding-inline: 0.24rem;
+    color: var(--accent-secondary);
+}
+
+.btn-primary {
+    background: #1b2927;
+}
+
+.btn-primary:hover {
+    background: var(--accent-primary);
+}
+
+.section-title::after {
+    background: linear-gradient(90deg, var(--accent-secondary), rgba(185, 133, 77, 0));
+}
+
+.stat-number,
+.timeline-item.current .mono-label,
+.badge-outline,
+.mono-tech,
+.accent,
+.accent-text,
+.mono-label {
+    color: var(--accent-primary);
+}
+
+.badge-award {
+    border-color: rgba(185, 133, 77, 0.3);
+    background: #f7f0e5;
+    color: #795b35;
+}
+
+.mentorship-panel {
+    display: grid;
+    max-width: 980px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    border: 1px solid #dfe5dc;
+    border-left: 3px solid var(--accent-primary);
+    border-radius: 12px;
+    background: linear-gradient(115deg, #f2f4ee, #f8f7f2);
+}
+
+.mentorship-panel .mono-label {
+    margin: 0 0 0.5rem;
+    color: var(--accent-primary);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+}
+
+.mentorship-panel .section-title {
+    margin: 0 0 0.55rem;
+    font-size: clamp(1.55rem, 3vw, 2rem);
+}
+
+.mentorship-panel .section-title::after {
+    display: none;
+}
+
+.mentorship-copy {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.mentorship-link {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    padding: 0.65rem 1rem;
+    border: 1px solid rgba(30, 102, 96, 0.3);
+    border-radius: 7px;
+    background: rgba(255, 255, 255, 0.72);
+    color: var(--accent-primary);
+    font-size: 0.82rem;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.mentorship-link:hover,
+.mentorship-link:focus-visible {
+    transform: translateY(-1px);
+    border-color: var(--accent-primary);
+    background: #fffefa;
+}
+
+@media (max-width: 700px) {
+    .mentorship-panel {
+        grid-template-columns: 1fr;
+        justify-items: start;
+        gap: 1.1rem;
+    }
+}
+
+/* A unified editorial system with aviation-inspired color and clearer hierarchy. */
+:root {
+    --bg-main: #f8f8f4;
+    --bg-alt: #eff2ed;
+    --surface: #fff;
+    --surface-strong: #f4f6f1;
+    --border: #e1e6df;
+    --text-primary: #182a27;
+    --text-secondary: #53625d;
+    --text-muted: #7b8982;
+    --accent-primary: #17675e;
+    --accent-secondary: #c18a51;
+    --accent-glow: rgba(23, 103, 94, 0.1);
+    --content-width: 1160px;
+    --section-space: clamp(4.75rem, 8vw, 7rem);
+}
+
+body {
+    background:
+        radial-gradient(ellipse at 88% 5%, rgba(193, 138, 81, 0.045), transparent 25rem),
+        var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.72;
+}
+
+::selection {
+    background: rgba(23, 103, 94, 0.18);
+    color: var(--text-primary);
+}
+
+#navbar {
+    border-bottom: 1px solid rgba(225, 230, 223, 0.9);
+    background: rgba(248, 248, 244, 0.88);
+    backdrop-filter: blur(16px);
+}
+
+.nav-container {
+    width: min(1320px, calc(100% - 3.5rem));
+}
+
+.nav-logo {
+    color: var(--text-primary);
+    font-size: 0.98rem;
+    font-weight: 650;
+    letter-spacing: -0.045em;
+}
+
+.nav-menu {
+    gap: clamp(0.45rem, 1.4vw, 1.15rem);
+}
+
+.nav-link {
+    padding: 0.55rem 0.8rem;
+    border-radius: 999px;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    transition: color 180ms ease, background-color 180ms ease;
+}
+
+.nav-link::after {
+    display: none;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+    background: rgba(23, 103, 94, 0.08);
+    color: var(--accent-primary);
+}
+
+.menu-toggle {
+    border-color: var(--border);
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.menu-toggle .bar {
+    background: var(--text-primary);
+}
+
+#hero {
+    background:
+        radial-gradient(ellipse at 84% 28%, rgba(23, 103, 94, 0.08), transparent 28rem),
+        radial-gradient(ellipse at 15% 5%, rgba(193, 138, 81, 0.1), transparent 26rem),
+        linear-gradient(180deg, #fbfbf7 0%, #f5f6f0 100%);
+}
+
+#hero::before {
+    display: block;
+    position: absolute;
+    top: 9%;
+    right: max(4vw, calc((100vw - 1320px) / 2));
+    width: clamp(280px, 36vw, 500px);
+    aspect-ratio: 1;
+    border: 1px solid rgba(23, 103, 94, 0.09);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(23, 103, 94, 0.045), transparent 68%);
+    content: "";
+    pointer-events: none;
+}
+
+.hero-data-canvas {
+    opacity: 0.55;
+}
+
+.portrait-frame::after {
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(248, 248, 244, 0.12) 36%,
+        rgba(248, 248, 244, 0.76) 78%,
+        #f5f6f0 100%
+    );
+}
+
+.hero-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    width: fit-content;
+    margin: 0 0 1rem;
+    padding: 0.48rem 0.75rem;
+    border: 1px solid rgba(23, 103, 94, 0.16);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.76);
+    color: var(--accent-primary);
+    font-size: 0.67rem;
+    font-weight: 600;
+    letter-spacing: 0.075em;
+}
+
+.status-dot {
+    background: #29946e;
+    box-shadow: 0 0 0 4px rgba(41, 148, 110, 0.1);
+}
+
+.hero-title {
+    color: var(--text-primary);
+    font-size: clamp(2.7rem, 5.1vw, 4.55rem);
+    font-weight: 560;
+    letter-spacing: -0.075em;
+    line-height: 1.02;
+}
+
+.hero-title span {
+    color: var(--accent-primary);
+}
+
+.hero-summary {
+    color: #465650;
+    font-size: 0.96rem;
+}
+
+.btn {
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+.btn-primary {
+    border: 1px solid var(--accent-primary);
+    background: var(--accent-primary);
+    box-shadow: 0 8px 20px rgba(23, 103, 94, 0.16);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    border-color: #10584f;
+    background: #10584f;
+}
+
+.hero-work-link {
+    color: var(--text-primary);
+    font-weight: 550;
+}
+
+.hero-credentials {
+    padding-top: 0.8rem;
+    border-top: 1px solid rgba(23, 103, 94, 0.13);
+    color: #63736d;
+    font-size: 0.58rem;
+    letter-spacing: 0.075em;
+}
+
+@keyframes project-route-draw {
+    from { stroke-dashoffset: 420; }
+    to { stroke-dashoffset: 0; }
+}
+
+.section {
+    padding-block: var(--section-space);
+}
+
+#about,
+#experience,
+#mindset,
+#contact {
+    background:
+        radial-gradient(ellipse at 100% 0%, rgba(23, 103, 94, 0.035), transparent 30rem),
+        var(--bg-alt);
+}
+
+.section-title {
+    max-width: 800px;
+    margin-bottom: 2rem;
+    font-size: clamp(2rem, 4.2vw, 3.15rem);
+    font-weight: 560;
+    letter-spacing: -0.065em;
+    line-height: 1.1;
+}
+
+.section-title::after {
+    width: 52px;
+    height: 3px;
+    margin-top: 1.1rem;
+    border-radius: 3px;
+    background: linear-gradient(90deg, var(--accent-secondary), rgba(193, 138, 81, 0.12));
+}
+
+.section-subtitle {
+    max-width: 720px;
+    margin: -1.1rem 0 2.2rem;
+    color: var(--text-secondary);
+}
+
+.about-grid {
+    gap: clamp(2rem, 6vw, 5rem);
+}
+
+.about-text {
+    max-width: 700px;
+    font-size: 1rem;
+}
+
+.about-text p {
+    margin-block: 0 1.1rem;
+}
+
+.stat-card,
+.experience-card,
+.project-card,
+.skill-category,
+.arch-node,
+.timeline-content {
+    border: 1px solid rgba(216, 225, 216, 0.95);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.88);
+    box-shadow: 0 12px 34px rgba(27, 48, 40, 0.055);
+}
+
+.stat-card,
+.skill-category,
+.arch-node,
+.timeline-content,
+.experience-card,
+.project-card {
+    transition:
+        transform 220ms cubic-bezier(0.2, 0.7, 0.2, 1),
+        border-color 220ms ease,
+        box-shadow 220ms ease;
+}
+
+.stat-card:hover,
+.skill-category:hover,
+.arch-node:hover,
+.timeline-content:hover,
+.experience-card:hover,
+.project-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(23, 103, 94, 0.28);
+    box-shadow: 0 18px 42px rgba(27, 48, 40, 0.095);
+}
+
+.stat-card {
+    min-height: 128px;
+    padding: 1.3rem;
+}
+
+.stat-number {
+    color: var(--accent-primary);
+    font-size: 2.05rem;
+    font-weight: 600;
+}
+
+.about-stats .stat-card:first-child {
+    border-top: 3px solid var(--accent-primary);
+}
+
+.stat-label,
+.timeline-content p,
+.exp-overview,
+.exp-bullets,
+.project-desc,
+.project-metrics {
+    color: var(--text-secondary);
+}
+
+.timeline {
+    max-width: 920px;
+    gap: 1rem;
+}
+
+.timeline-content {
+    padding: 1.3rem 1.55rem;
+}
+
+.timeline-item .mono-label {
+    display: inline-flex;
+    padding: 0.25rem 0.55rem;
+    border: 1px solid rgba(23, 103, 94, 0.12);
+    border-radius: 999px;
+    background: rgba(23, 103, 94, 0.045);
+    font-size: 0.62rem;
+}
+
+.timeline-content h3,
+.skill-category h3 {
+    color: var(--text-primary);
+    letter-spacing: -0.025em;
+}
+
+.timeline-dot {
+    border-color: var(--accent-primary);
+}
+
+.timeline::before {
+    background: linear-gradient(var(--accent-primary), rgba(193, 138, 81, 0.3));
+}
+
+.experience-card {
+    padding: clamp(1.4rem, 4vw, 2.4rem);
+}
+
+.exp-header {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.exp-header h3 {
+    color: var(--text-primary);
+    letter-spacing: -0.035em;
+}
+
+.exp-header .mono-label {
+    padding: 0.4rem 0.7rem;
+    border: 1px solid rgba(23, 103, 94, 0.15);
+    border-radius: 999px;
+    background: rgba(23, 103, 94, 0.06);
+    white-space: nowrap;
+}
+
+.exp-bullets {
+    gap: 0.7rem;
+}
+
+.badge,
+.tech-stack span {
+    border-color: #e3e8e1;
+    background: #f6f8f4;
+    color: #50615b;
+}
+
+.badge-award {
+    border-color: rgba(193, 138, 81, 0.28);
+    background: #faf3e9;
+    color: #795b35;
+}
+
+.filter-container {
+    gap: 0.55rem;
+    margin-bottom: 1.4rem;
+}
+
+.filter-btn {
+    padding: 0.6rem 0.95rem;
+    border-color: #dce4dc;
+    background: rgba(255, 255, 255, 0.7);
+    color: var(--text-secondary);
+    transition: color 180ms ease, background 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.filter-btn:hover {
+    transform: translateY(-1px);
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    border-color: var(--accent-primary);
+    background: var(--accent-primary);
+    color: #fff;
+}
+
+.projects-grid {
+    gap: 1.15rem;
+}
+
+.project-card {
+    overflow: hidden;
+    background: var(--surface);
+}
+
+.project-art-flow .art-flow-line {
+    stroke-dasharray: 420;
+    stroke-dashoffset: 0;
+}
+
+.project-card:hover .project-art-flow .art-flow-line,
+.project-card:focus-within .project-art-flow .art-flow-line {
+    animation: project-route-draw 1.1s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.project-content {
+    padding: 1.15rem;
+}
+
+.project-art {
+    height: 118px;
+    margin-bottom: 1.2rem;
+    border-color: #e8ece5;
+    border-radius: 13px;
+    background:
+        radial-gradient(ellipse at 80% 0%, rgba(193, 138, 81, 0.1), transparent 55%),
+        #f5f7f2;
+}
+
+.project-content h3 {
+    color: var(--text-primary);
+    font-size: 1.18rem;
+    letter-spacing: -0.035em;
+}
+
+.project-desc {
+    font-size: 0.88rem;
+    line-height: 1.7;
+}
+
+.tech-stack span {
+    border-radius: 999px;
+}
+
+.architecture-flow {
+    gap: 0.7rem;
+}
+
+.arch-node {
+    min-height: 190px;
+    padding: 1.35rem;
+}
+
+.node-icon {
+    border-color: rgba(23, 103, 94, 0.12);
+    border-radius: 13px;
+    background: #edf4ef;
+    color: var(--accent-primary);
+}
+
+.arch-node h4 {
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+}
+
+.arch-line {
+    background: linear-gradient(90deg, rgba(23, 103, 94, 0.55), rgba(193, 138, 81, 0.55));
+}
+
+.skill-showcase {
+    gap: 1.15rem;
+    margin-bottom: 1.15rem;
+}
+
+.showcase-panel {
+    border-color: #dfe6df;
+    border-radius: 18px;
+    background:
+        radial-gradient(circle at top right, rgba(23, 103, 94, 0.08), transparent 40%),
+        linear-gradient(145deg, #fff, #f2f5ef);
+}
+
+.showcase-visual {
+    border: 1px solid rgba(225, 230, 223, 0.8);
+}
+
+.showcase-stat {
+    border-radius: 14px;
+    background: linear-gradient(145deg, #fff, #f5f7f2);
+    box-shadow: 0 6px 20px rgba(27, 48, 40, 0.035);
+}
+
+.skill-category {
+    padding: 1.5rem;
+}
+
+.skill-category h3 {
+    font-size: 1.05rem;
+}
+
+.badge-outline {
+    border-style: solid;
+    border-color: rgba(23, 103, 94, 0.2);
+    background: rgba(23, 103, 94, 0.045);
+    color: var(--accent-primary);
+}
+
+.contact-container {
+    border-color: rgba(255, 255, 255, 0.13);
+    border-radius: 22px;
+    background:
+        radial-gradient(ellipse at 90% 0%, rgba(193, 138, 81, 0.19), transparent 42%),
+        linear-gradient(135deg, #193d38, #122e2a);
+    box-shadow: 0 24px 60px rgba(18, 46, 42, 0.14);
+}
+
+#contact .contact-container .hero-title,
+#contact .contact-container .hero-summary {
+    color: #f7faf5;
+}
+
+#contact .contact-container .btn-primary {
+    border-color: #fff;
+    background: #fff;
+    color: #173c36;
+    box-shadow: none;
+}
+
+#contact .contact-container .btn-primary:hover {
+    background: #eaf2eb;
+}
+
+#contact .contact-container .btn-secondary {
+    border-color: rgba(255, 255, 255, 0.34);
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+}
+
+#contact .contact-container .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.16);
+}
+
+#contact .contact-info,
+#contact .contact-info .mono-label {
+    color: #c6d8ce;
+}
+
+.mentorship-panel {
+    border-color: #dce4dc;
+    border-left-color: var(--accent-primary);
+    border-radius: 16px;
+    background:
+        radial-gradient(ellipse at 100% 0%, rgba(193, 138, 81, 0.08), transparent 38%),
+        linear-gradient(115deg, #f0f4ee, #fbfaf6);
+    box-shadow: 0 12px 34px rgba(27, 48, 40, 0.045);
+}
+
+.mentorship-link {
+    border-color: rgba(23, 103, 94, 0.25);
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(27, 48, 40, 0.04);
+}
+
+.mentorship-link:hover,
+.mentorship-link:focus-visible {
+    background: #f4f8f3;
+    box-shadow: 0 7px 18px rgba(27, 48, 40, 0.08);
+}
+
+footer {
+    border-top-color: rgba(255, 255, 255, 0.12);
+    background: #142f2b;
+    color: #f5f7f1;
+}
+
+footer .nav-logo,
+footer .footer-left .mono-label,
+footer .footer-right {
+    color: #c2d0c7;
+}
+
+:focus-visible {
+    outline-color: #b5793d;
+    outline-offset: 4px;
+}
+
+@media (max-width: 760px) {
+    .nav-container {
+        width: calc(100% - 2rem);
+    }
+
+    .nav-link {
+        border-radius: 8px;
+    }
+
+    .nav-container.nav-open .nav-menu {
+        border: 1px solid var(--border);
+        border-top: 0;
+        border-radius: 0 0 14px 14px;
+        background: rgba(248, 248, 244, 0.98);
+        box-shadow: 0 18px 30px rgba(27, 48, 40, 0.12);
+    }
+
+    .menu-toggle {
+        border-radius: 50%;
+    }
+
+    .menu-toggle .bar {
+        background: var(--text-primary);
+    }
+
+    .hero-title {
+        font-size: clamp(2.45rem, 9vw, 3.6rem);
+    }
+}
+
+@media (max-width: 640px) {
+    .section-title {
+        margin-bottom: 1.5rem;
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+    }
+
+    .hero-status {
+        font-size: 0.59rem;
+        max-width: 100%;
+        flex-wrap: wrap;
+        white-space: normal;
+    }
+
+    .hero-copy {
+        min-width: 0;
+    }
+
+    .hero-work-link {
+        display: inline-flex;
+        min-height: 44px;
+        align-items: center;
+    }
+
+    .hero-credentials {
+        max-width: 350px;
+        font-size: 0.52rem;
+        line-height: 1.8;
+    }
+
+    .about-stats {
+        gap: 0.7rem;
+    }
+
+    .stat-card {
+        min-height: 112px;
+        padding: 1rem;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+    .exp-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .architecture-flow {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .arch-node {
+        min-height: 165px;
+        padding: 1rem;
+    }
+
+    .arch-line {
+        display: none;
+    }
+
+    .skill-showcase {
+        grid-template-columns: 1fr;
+    }
+
+    .showcase-visual {
+        height: 170px;
+    }
+
+    .contact-container {
+        padding: 1.6rem 1.1rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .stat-card,
+    .skill-category,
+    .arch-node,
+    .timeline-content,
+    .experience-card,
+    .project-card,
+    .filter-btn,
+    .mentorship-link {
+        transition: none;
+    }
+
+    .project-card:hover .project-art-flow .art-flow-line,
+    .project-card:focus-within .project-art-flow .art-flow-line {
+        animation: none;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -2468,8 +3314,10 @@ footer {
                 <span class="bar"></span>
             </button>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#about" class="nav-link">Perspective</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Work</a></li>
+                <li><a href="#mentorship" class="nav-link">Mentoring</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
@@ -2486,17 +3334,18 @@ footer {
             </div>
             <div class="hero-content">
                 <div class="hero-copy">
-                    <p class="hero-status"><span class="status-dot"></span> DATA ANALYST <span aria-hidden="true">&middot;</span> DATA ENGINEER</p>
-                    <h1 class="hero-title">I turn complex data into clear insights and systems that scale.</h1>
+                    <p class="hero-status"><span class="status-dot"></span> DATA ANALYTICS <span aria-hidden="true">&middot;</span> POWER BI <span aria-hidden="true">&middot;</span> BUSINESS INTELLIGENCE</p>
+                    <h1 class="hero-title">I turn complex data into <span>clear, confident decisions.</span></h1>
                 </div>
                 <div class="hero-detail">
                     <p class="hero-summary">
-                        I build analytics solutions and automate data workflows with SQL, Power BI, and thoughtful data modeling.
+                        I build thoughtful Power BI and analytics solutions, combining 3 years of hands-on experience with design thinking and an MBA in Finance.
                     </p>
                     <div class="hero-cta">
-                        <a href="mailto:purnadityasuvvari@gmail.com" class="btn btn-primary">Email me <span aria-hidden="true">&nearr;</span></a>
-                        <a href="#projects" class="hero-work-link">Explore my work <span aria-hidden="true">&darr;</span></a>
+                        <a href="#projects" class="btn btn-primary">Explore my work <span aria-hidden="true">&darr;</span></a>
+                        <a href="mailto:purnadityasuvvari@gmail.com" class="hero-work-link">Let’s connect <span aria-hidden="true">&nearr;</span></a>
                     </div>
+                    <p class="hero-credentials">3 YEARS IN ANALYTICS <span aria-hidden="true">&middot;</span> POWER BI <span aria-hidden="true">&middot;</span> MBA FINANCE</p>
                 </div>
             </div>
         </div>
@@ -2505,21 +3354,29 @@ footer {
     <!-- About Section -->
     <section id="about" class="section reveal">
         <div class="container">
-            <h2 class="section-title">The Engineering Perspective</h2>
+            <h2 class="section-title">The person behind the dashboards</h2>
             <div class="about-grid">
                 <div class="about-text">
-                    <p>I started my journey using data to answer critical business questions. Over the past 3+ years as a Power BI Senior Developer, I've designed enterprise-scale solutions for over 100 users and complex dimensional models.</p>
-                    <p>But building dashboards taught me a fundamental truth: <strong>analytics is only as good as the pipeline feeding it.</strong></p>
-                    <p>My focus has naturally shifted upstream. I am increasingly interested in the systems behind the data—optimizing SQL queries for 50% performance gains, orchestrating pipelines with Power Automate to eliminate manual work, and managing data quality. I am deliberately expanding my skillset in Python and cloud platforms to build robust data engineering architectures at scale.</p>
+                    <p>I’m a data analytics and Power BI developer with <strong>3 years of experience</strong> turning business questions into useful, trusted reporting. I build dashboards and data models that help teams see what matters and decide what to do next.</p>
+                    <p>My MBA in Finance helps me connect performance measures to business outcomes. Design thinking and UI/UX keep the experience grounded in the people using the insight, while project management helps move ideas into delivery.</p>
+                    <p>My professional experience also includes aviation, where domain knowledge helps put operational data in context. I’m now looking to bring my analytics, reporting, and problem-solving skills to broader data-focused roles.</p>
                 </div>
                 <div class="about-stats">
                     <div class="stat-card">
-                        <h3 class="stat-number">3+</h3>
-                        <p class="stat-label">Years Enterprise Exp.</p>
+                        <h3 class="stat-number">3 yrs</h3>
+                        <p class="stat-label">Analytics &amp; Power BI development</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="stat-number">15+</h3>
+                        <p class="stat-label">Production dashboards delivered</p>
                     </div>
                     <div class="stat-card">
                         <h3 class="stat-number">60%</h3>
-                        <p class="stat-label">Manual Work Reduced via Automation</p>
+                        <p class="stat-label">Less manual work through automation</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="stat-number">MBA</h3>
+                        <p class="stat-label">Finance</p>
                     </div>
                 </div>
             </div>
@@ -2529,38 +3386,38 @@ footer {
     <!-- Career Journey -->
     <section id="journey" class="section reveal">
         <div class="container">
-            <h2 class="section-title">My Data Journey</h2>
+            <h2 class="section-title">How I turn questions into insight</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <span class="mono-label">Foundation</span>
-                        <h3>Data Analysis & BI</h3>
-                        <p>Mastered complex DAX, Power Query, and visualization design to deliver actionable insights.</p>
+                        <span class="mono-label">01 / Understand</span>
+                        <h3>Start with the business question</h3>
+                        <p>Clarify what teams need to understand and the decisions the data should support, using domain knowledge where it adds context.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <span class="mono-label">Modeling</span>
-                        <h3>SQL & Dimensional Modeling</h3>
-                        <p>Designed star schemas and optimized T-SQL stored procedures, improving reporting performance significantly.</p>
+                        <span class="mono-label">02 / Design</span>
+                        <h3>People-first problem framing</h3>
+                        <p>Use design thinking to understand stakeholder needs and shape the right question before shaping the report.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <span class="mono-label">Orchestration</span>
-                        <h3>Workflow Automation</h3>
-                        <p>Leveraged Power Automate to build end-to-end refresh pipelines, integrating multiple source systems seamlessly.</p>
+                        <span class="mono-label">03 / Analyze</span>
+                        <h3>Build meaningful analytics</h3>
+                        <p>Use Power BI, SQL, data modeling, and financial context to make performance clear and actionable.</p>
                     </div>
                 </div>
                 <div class="timeline-item current">
                     <div class="timeline-dot pulse"></div>
                     <div class="timeline-content">
-                        <span class="mono-label accent-text">Currently Developing</span>
-                        <h3>Data Engineering</h3>
-                        <p>Expanding into Python processing, Azure Data Factory, and scalable cloud data architectures to manage data lifecycle end-to-end.</p>
+                        <span class="mono-label accent-text">04 / Deliver</span>
+                        <h3>Make insight useful</h3>
+                        <p>Manage delivery, communicate findings, and help teams build confidence using data.</p>
                     </div>
                 </div>
             </div>
@@ -2570,16 +3427,16 @@ footer {
     <!-- Experience Section -->
     <section id="experience" class="section reveal">
         <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
+            <h2 class="section-title">Professional experience</h2>
             <div class="experience-card">
                 <div class="exp-header">
                     <div>
-                        <h3>Power BI Senior Developer | Enterprise Analytics</h3>
+                        <h3>Power BI Developer | Enterprise Analytics</h3>
                         <p class="exp-location">Hyderabad, IN</p>
                     </div>
-                    <span class="mono-label">3+ Years</span>
+                    <span class="mono-label">3 Years</span>
                 </div>
-                <p class="exp-overview">Designed and deployed advanced analytics solutions, orchestrated automated data pipelines, and optimized SQL databases for enterprise decision-making.</p>
+                <p class="exp-overview">Turned complex business and operational data into dependable reporting—combining Power BI development, SQL optimization, automation, and thoughtful data modeling. My aviation experience also gives me first-hand context for operational metrics and reporting needs.</p>
                 <ul class="exp-bullets">
                     <li>Built and optimized SQL queries, stored procedures, and T-SQL scripts; <strong>improved query performance by 40-50%</strong> through indexing and execution plan analysis.</li>
                     <li>Developed automated data refresh mechanisms using Power Automate, orchestrating pipelines from source to BI, <strong>reducing manual intervention by 60%</strong>.</li>
@@ -2598,7 +3455,8 @@ footer {
     <!-- Projects Section -->
     <section id="projects" class="section reveal">
         <div class="container">
-            <h2 class="section-title">Technical Projects</h2>
+            <h2 class="section-title">Selected analytics work</h2>
+            <p class="section-subtitle">Practical reporting, modeling, and automation built to make decisions clearer and delivery more dependable.</p>
             
             <div class="filter-container">
                 <button class="filter-btn active" data-filter="all">All</button>
@@ -2698,11 +3556,11 @@ footer {
         </div>
     </section>
 
-    <!-- Engineering Mindset / Architecture -->
+    <!-- Decision workflow -->
     <section id="mindset" class="section reveal">
         <div class="container">
-            <h2 class="section-title">Engineering Mindset</h2>
-            <p class="section-subtitle">How I map my current stack to the modern data lifecycle.</p>
+            <h2 class="section-title">A thoughtful approach to analytics</h2>
+            <p class="section-subtitle">From understanding the business question to delivering clear, useful reporting.</p>
             
             <div class="architecture-flow">
                 <div class="arch-node">
@@ -2711,9 +3569,9 @@ footer {
                             <path d="M16 4v15m0 0 6-6m-6 6-6-6M6 21v5a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5" />
                         </svg>
                     </div>
-                    <h4>Ingestion</h4>
-                    <span class="mono-tech">Power Automate</span>
-                    <span class="mono-tech">Python</span>
+                    <h4>Understand</h4>
+                    <span class="mono-tech">Business &amp; aviation context</span>
+                    <span class="mono-tech">Stakeholder needs</span>
                 </div>
                 <div class="arch-line"></div>
                 <div class="arch-node">
@@ -2725,9 +3583,9 @@ footer {
                             <circle cx="15" cy="24" r="2.5" />
                         </svg>
                     </div>
-                    <h4>Transformation</h4>
-                    <span class="mono-tech">T-SQL</span>
-                    <span class="mono-tech">Power Query M</span>
+                    <h4>Design</h4>
+                    <span class="mono-tech">Design thinking</span>
+                    <span class="mono-tech">UI/UX</span>
                 </div>
                 <div class="arch-line"></div>
                 <div class="arch-node">
@@ -2737,9 +3595,9 @@ footer {
                             <path d="M6 7v18c0 2.2 4.5 4 10 4s10-1.8 10-4V7M6 16c0 2.2 4.5 4 10 4s10-1.8 10-4" />
                         </svg>
                     </div>
-                    <h4>Storage & Model</h4>
-                    <span class="mono-tech">SQL Server</span>
-                    <span class="mono-tech">Dataverse</span>
+                    <h4>Connect</h4>
+                    <span class="mono-tech">MBA Finance</span>
+                    <span class="mono-tech">Business measures</span>
                 </div>
                 <div class="arch-line"></div>
                 <div class="arch-node">
@@ -2748,9 +3606,9 @@ footer {
                             <path d="M5 27h23M8 24V15h5v9m3 0V8h5v16m3 0v-6h5v6" />
                         </svg>
                     </div>
-                    <h4>Analytics & BI</h4>
+                    <h4>Deliver</h4>
                     <span class="mono-tech">Power BI</span>
-                    <span class="mono-tech">DAX</span>
+                    <span class="mono-tech">Project management</span>
                 </div>
             </div>
         </div>
@@ -2759,14 +3617,14 @@ footer {
     <!-- Skills Section -->
     <section id="skills" class="section reveal">
         <div class="container">
-            <h2 class="section-title">Technical Arsenal</h2>
+            <h2 class="section-title">Skills with business context</h2>
             <div class="skill-showcase">
                 <div class="showcase-panel">
                     <div class="showcase-header">
-                        <span>Data Lifecycle</span>
-                        <span class="showcase-status">Live</span>
+                        <span>From question to insight</span>
+                        <span class="showcase-status">End-to-end</span>
                     </div>
-                    <svg class="showcase-visual" viewBox="0 0 520 210" aria-label="Illustrated data flow pipeline">
+                    <svg class="showcase-visual" viewBox="0 0 520 210" aria-label="Illustration of an analytics workflow from source data to decisions">
                         <g>
                             <path class="showcase-gridline" d="M35 40H485M35 90H485M35 140H485M35 190H485" />
                             <path class="showcase-gridline" d="M80 20V190M160 20V190M240 20V190M320 20V190M400 20V190" />
@@ -2807,7 +3665,7 @@ footer {
             <div class="skills-grid">
                 
                 <div class="skill-category">
-                    <h3>Data Engineering & DBs</h3>
+                    <h3>Data &amp; modeling</h3>
                     <div class="skill-badges">
                         <span class="badge">SQL Server</span>
                         <span class="badge">T-SQL</span>
@@ -2818,7 +3676,7 @@ footer {
                 </div>
 
                 <div class="skill-category">
-                    <h3>Analytics & BI</h3>
+                    <h3>Analytics &amp; BI</h3>
                     <div class="skill-badges">
                         <span class="badge">Power BI</span>
                         <span class="badge">DAX</span>
@@ -2829,21 +3687,24 @@ footer {
                 </div>
 
                 <div class="skill-category">
-                    <h3>Programming & Automation</h3>
+                    <h3>Automation &amp; delivery</h3>
                     <div class="skill-badges">
                         <span class="badge">Python (Data Processing)</span>
                         <span class="badge">Power Automate</span>
                         <span class="badge">VBA Macros</span>
                         <span class="badge">Git</span>
+                        <span class="badge">Project Management</span>
                     </div>
                 </div>
 
                 <div class="skill-category learning-category">
-                    <h3>Currently Exploring</h3>
+                    <h3>Business, design &amp; leadership</h3>
                     <div class="skill-badges">
-                        <span class="badge badge-outline">Azure Data Factory</span>
-                        <span class="badge badge-outline">Cloud Architectures</span>
-                        <span class="badge badge-outline">Scalable ETL</span>
+                        <span class="badge badge-outline">Aviation domain knowledge</span>
+                        <span class="badge badge-outline">MBA Finance</span>
+                        <span class="badge badge-outline">Design Thinking</span>
+                        <span class="badge badge-outline">UI/UX</span>
+                        <span class="badge badge-outline">Mentoring</span>
                     </div>
                 </div>
 
@@ -2851,12 +3712,24 @@ footer {
         </div>
     </section>
 
+    <!-- Mentorship -->
+    <section id="mentorship" class="section reveal">
+        <div class="container mentorship-panel">
+            <div>
+                <p class="mono-label">MENTORING</p>
+                <h2 class="section-title">Sharing what I learn</h2>
+                <p class="mentorship-copy">I enjoy helping others build confidence with data and communicate their thinking.</p>
+            </div>
+            <a class="mentorship-link" href="https://freelance-portfolio-sigma-ten.vercel.app/" target="_blank" rel="noopener noreferrer">A little more of my work <span aria-hidden="true">&nearr;</span></a>
+        </div>
+    </section>
+
     <!-- Resume & Contact -->
     <section id="contact" class="section reveal">
         <div id="resume" class="container contact-container">
-            <h2 class="hero-title" style="font-size: 2.5rem; text-align: center;">Let's Build Better With Data.</h2>
+            <h2 class="hero-title" style="font-size: 2.5rem; text-align: center;">Let’s make the next decision a better one.</h2>
             <p class="hero-summary" style="text-align: center; margin: 0 auto 2rem auto;">
-                Currently exploring roles where I can leverage my deep analytical background while contributing to robust data engineering systems.
+                I’m exploring data analytics and Power BI development roles where I can build useful reporting, support better decisions, and keep growing my data skills.
             </p>
             
             <div class="contact-links">
@@ -2877,7 +3750,7 @@ footer {
         <div class="container footer-content">
             <div class="footer-left">
                 <p class="nav-logo">PS<span class="accent">.</span></p>
-                <p class="mono-label">Data Analyst &rarr; Data Engineer</p>
+                <p class="mono-label">Data Analytics &middot; Power BI &middot; Finance</p>
             </div>
             <div class="footer-right">
                 <p>&copy; <span id="year"></span> Purnaditya Suvvari. All rights reserved.</p>
