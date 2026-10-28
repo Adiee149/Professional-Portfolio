@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Purnaditya Suvvari — Data Analytics &amp; Power BI Developer</title>
-    <meta name="description" content="Purnaditya Suvvari is a data analytics and Power BI developer with 3 years of experience, an MBA in Finance, and strengths in data modeling, design thinking, and business reporting.">
+    <title>Purnaditya Suvvari — Data Analyst &amp; Power BI Developer</title>
+    <meta name="description" content="Purnaditya Suvvari is a Data Analyst, Business Analyst, and Power BI Developer building practical analytics for aviation, access governance, and business operations.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -3297,6 +3297,1055 @@ footer .footer-right {
     }
 }
 
+.tool-orbit {
+    position: absolute;
+    z-index: 4;
+    inset: 12% 18% 18%;
+    pointer-events: none;
+    border: 1px solid rgba(30, 102, 96, 0.16);
+    border-radius: 50%;
+    transform: rotate(-12deg);
+}
+
+.tool-orbit::before,
+.tool-orbit::after {
+    position: absolute;
+    inset: 12% 11%;
+    border: 1px solid rgba(185, 133, 77, 0.14);
+    border-radius: 50%;
+    content: "";
+    transform: rotate(58deg);
+}
+
+.tool-orbit::after {
+    inset: 20% 5%;
+    border-color: rgba(30, 102, 96, 0.1);
+    transform: rotate(-34deg);
+}
+
+.orbit-tool {
+    position: absolute;
+    display: inline-flex;
+    min-height: 24px;
+    align-items: center;
+    padding: 0.3rem 0.5rem;
+    border: 1px solid rgba(30, 102, 96, 0.2);
+    border-radius: 999px;
+    background: rgba(251, 250, 246, 0.76);
+    color: #42635f;
+    font-family: var(--font-mono);
+    font-size: 0.53rem;
+    letter-spacing: 0.04em;
+    box-shadow: 0 5px 18px rgba(31, 51, 46, 0.08);
+    animation: orbit-drift 7s ease-in-out infinite;
+}
+
+.orbit-powerbi { top: 4%; left: 18%; animation-delay: -1s; }
+.orbit-sql { top: 34%; right: 1%; animation-delay: -3.2s; }
+.orbit-fabric { right: 15%; bottom: 7%; animation-delay: -5.1s; }
+.orbit-excel { bottom: 9%; left: 12%; animation-delay: -2.4s; }
+.orbit-azure { top: 16%; left: 2%; animation-delay: -4.4s; }
+
+@keyframes orbit-drift {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(0, -6px, 0); }
+}
+
+@media (max-width: 760px) {
+    .tool-orbit {
+        inset: 5% 8% 12%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .orbit-tool,
+    .tool-orbit::before,
+    .tool-orbit::after {
+        animation: none;
+    }
+}
+
+/* Midnight career map: a more cinematic visual anchor for the story section. */
+:root {
+    --bg-main: #11111d;
+    --bg-alt: #181827;
+    --surface: #1b1b2b;
+    --surface-strong: #23233a;
+    --border: rgba(215, 205, 244, 0.15);
+    --text-primary: #f5f1e9;
+    --text-secondary: #b7b2c5;
+    --text-muted: #858198;
+    --accent-primary: #c5a5ff;
+    --accent-secondary: #f0b35b;
+    --accent-glow: rgba(197, 165, 255, 0.16);
+}
+
+body {
+    background:
+        radial-gradient(ellipse at 86% 16%, rgba(108, 80, 174, 0.2), transparent 31rem),
+        radial-gradient(ellipse at 7% 66%, rgba(240, 179, 91, 0.07), transparent 27rem),
+        var(--bg-main);
+}
+
+#navbar,
+footer {
+    background: rgba(17, 17, 29, 0.88);
+}
+
+#hero {
+    background:
+        radial-gradient(ellipse at 58% 20%, rgba(197, 165, 255, 0.1), transparent 44%),
+        var(--bg-main);
+    color: var(--text-primary);
+}
+
+.hero-title span,
+.hero-status,
+.hero-credentials span,
+.stat-number,
+.timeline-item.current .mono-label,
+.badge-outline,
+.mono-tech,
+.accent,
+.accent-text,
+.mono-label {
+    color: var(--accent-primary);
+}
+
+.hero-summary,
+.about-text,
+.timeline-content p,
+.project-desc,
+.section-subtitle,
+.knowledge-copy > p {
+    color: var(--text-secondary);
+}
+
+.btn-primary {
+    background: var(--accent-primary);
+    color: #171323;
+    box-shadow: 0 10px 32px rgba(197, 165, 255, 0.18);
+}
+
+.btn-primary:hover {
+    background: #d7c2ff;
+}
+
+.stat-card,
+.experience-card,
+.project-card,
+.skill-category,
+.arch-node,
+.timeline-content {
+    border-color: var(--border);
+    background: linear-gradient(145deg, rgba(35, 35, 58, 0.84), rgba(22, 22, 37, 0.82));
+    box-shadow: 0 22px 65px rgba(0, 0, 0, 0.2);
+}
+
+.tool-orbit {
+    border-color: rgba(197, 165, 255, 0.2);
+}
+
+.tool-orbit::before {
+    border-color: rgba(240, 179, 91, 0.18);
+}
+
+.orbit-tool {
+    border-color: rgba(197, 165, 255, 0.3);
+    background: rgba(27, 27, 43, 0.84);
+    color: #d7c9f1;
+    box-shadow: 0 5px 22px rgba(0, 0, 0, 0.2);
+}
+
+.journey-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.journey-heading .section-title {
+    margin-bottom: 0;
+}
+
+.journey-intro {
+    max-width: 315px;
+    margin: 0 0 0.35rem;
+    color: var(--text-secondary);
+    font-size: 0.88rem;
+}
+
+.career-map {
+    position: relative;
+    min-height: 570px;
+    margin-top: 2.5rem;
+    overflow: hidden;
+    border: 1px solid rgba(197, 165, 255, 0.16);
+    border-radius: 22px;
+    background:
+        radial-gradient(circle at 50% 50%, rgba(197, 165, 255, 0.08), transparent 46%),
+        linear-gradient(145deg, rgba(35, 35, 58, 0.82), rgba(16, 16, 28, 0.95));
+    box-shadow: 0 35px 100px rgba(0, 0, 0, 0.25);
+}
+
+.career-map-grid {
+    position: absolute;
+    inset: 0;
+    opacity: 0.48;
+    background-image:
+        linear-gradient(rgba(197, 165, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(197, 165, 255, 0.05) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: radial-gradient(ellipse at center, black, transparent 82%);
+}
+
+.career-route {
+    position: absolute;
+    z-index: 1;
+    top: 135px;
+    left: 3%;
+    width: 94%;
+    height: 300px;
+    overflow: visible;
+}
+
+.route-shadow,
+.route-line {
+    fill: none;
+    stroke-linecap: round;
+    stroke-width: 2;
+}
+
+.route-shadow {
+    stroke: rgba(197, 165, 255, 0.08);
+    stroke-width: 12;
+}
+
+.route-line {
+    stroke: url(#route-gradient);
+    stroke-dasharray: 0.08 0.015;
+    animation: route-travel 8s linear infinite;
+}
+
+.route-node {
+    fill: #1b1b2b;
+    stroke: #f0b35b;
+    stroke-width: 3;
+}
+
+.route-node-current {
+    stroke: #7fe0d1;
+}
+
+.route-pulse {
+    fill: none;
+    stroke: #7fe0d1;
+    stroke-width: 1;
+    opacity: 0;
+    animation: route-pulse 2.4s ease-out infinite;
+}
+
+.career-milestones {
+    position: absolute;
+    z-index: 2;
+    inset: 1.25rem;
+}
+
+.career-card {
+    position: absolute;
+    width: min(230px, 23%);
+    padding: 1rem;
+    border: 1px solid rgba(215, 205, 244, 0.18);
+    border-radius: 13px;
+    background: rgba(25, 25, 42, 0.88);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.2);
+    transition: transform 220ms ease, border-color 220ms ease, background 220ms ease;
+}
+
+.career-card:hover {
+    border-color: rgba(197, 165, 255, 0.55);
+    background: rgba(39, 38, 63, 0.95);
+    transform: translateY(-5px);
+}
+
+.career-card-one { top: 1rem; left: 2%; }
+.career-card-two { right: 28%; bottom: 1rem; }
+.career-card-three { top: 1rem; right: 18%; }
+.career-card-four { right: 1%; bottom: 1rem; }
+
+.career-index,
+.career-tag {
+    color: #f0b35b;
+    font-family: var(--font-mono);
+    font-size: 0.56rem;
+    letter-spacing: 0.09em;
+}
+
+.career-card h3 {
+    margin: 0.55rem 0 0.35rem;
+    color: var(--text-primary);
+    font-size: 0.98rem;
+    line-height: 1.3;
+}
+
+.career-card p {
+    min-height: 4.5rem;
+    margin: 0 0 0.7rem;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    line-height: 1.55;
+}
+
+.career-tag-current {
+    color: #7fe0d1;
+}
+
+@keyframes route-travel {
+    to { stroke-dashoffset: -1; }
+}
+
+@keyframes route-pulse {
+    0% { opacity: 0.65; transform: scale(0.7); transform-origin: 930px 72px; }
+    100% { opacity: 0; transform: scale(2.2); transform-origin: 930px 72px; }
+}
+
+.knowledge-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.72fr);
+    gap: 1.25rem;
+    align-items: stretch;
+}
+
+.knowledge-copy,
+.knowledge-link {
+    padding: clamp(1.5rem, 3vw, 2.4rem);
+    border: 1px solid var(--border);
+    border-radius: 17px;
+}
+
+.knowledge-copy {
+    background: linear-gradient(140deg, rgba(35, 35, 58, 0.9), rgba(20, 20, 34, 0.84));
+}
+
+.knowledge-copy .section-title {
+    margin-bottom: 0.8rem;
+}
+
+.knowledge-copy > p {
+    max-width: 650px;
+    margin: 0;
+    font-size: 0.86rem;
+}
+
+.knowledge-link {
+    display: flex;
+    min-height: 190px;
+    flex-direction: column;
+    justify-content: space-between;
+    background:
+        radial-gradient(circle at 90% 15%, rgba(240, 179, 91, 0.22), transparent 45%),
+        linear-gradient(145deg, #30294b, #1d1c31);
+    color: var(--text-primary);
+    transition: transform 220ms ease, border-color 220ms ease;
+}
+
+.knowledge-link:hover,
+.knowledge-link:focus-visible {
+    border-color: rgba(240, 179, 91, 0.65);
+    transform: translateY(-4px);
+}
+
+.knowledge-link-top {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #f0b35b;
+    font-family: var(--font-mono);
+    font-size: 0.58rem;
+    letter-spacing: 0.08em;
+}
+
+.knowledge-signal {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #7fe0d1;
+    box-shadow: 0 0 0 5px rgba(127, 224, 209, 0.1);
+}
+
+.knowledge-link strong {
+    margin: 1.2rem 0 0.5rem;
+    font-size: 1.35rem;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+}
+
+.knowledge-link-bottom {
+    color: #c0b9d1;
+    font-size: 0.77rem;
+}
+
+/* Project gallery: dark data-terminal thumbnails that match the portfolio system. */
+#projects {
+    background:
+        radial-gradient(ellipse at 85% 12%, rgba(127, 224, 209, 0.055), transparent 28rem),
+        #181827;
+}
+
+#projects .section-subtitle {
+    max-width: 640px;
+    color: #aaa5bb;
+}
+
+#projects .filter-container {
+    margin-top: 2rem;
+    margin-bottom: 1.8rem;
+}
+
+#projects .filter-btn {
+    border-color: rgba(215, 205, 244, 0.18);
+    background: rgba(255, 255, 255, 0.035);
+    color: #aaa5bb;
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.04em;
+}
+
+#projects .filter-btn.active,
+#projects .filter-btn:hover,
+#projects .filter-btn:focus-visible {
+    border-color: rgba(197, 165, 255, 0.65);
+    background: rgba(197, 165, 255, 0.14);
+    color: #e4d8ff;
+}
+
+#projects .project-card {
+    border-color: rgba(215, 205, 244, 0.15);
+    background: linear-gradient(155deg, rgba(35, 35, 58, 0.94), rgba(21, 21, 36, 0.94));
+}
+
+#projects .project-card:hover {
+    border-color: rgba(127, 224, 209, 0.42);
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.3);
+}
+
+#projects .project-content {
+    padding: 1.15rem 1.15rem 1.3rem;
+}
+
+#projects .project-art {
+    height: 142px;
+    margin: -0.05rem -0.05rem 1.25rem;
+    border: 1px solid rgba(215, 205, 244, 0.13);
+    border-radius: 12px;
+    background:
+        radial-gradient(circle at 75% 15%, rgba(197, 165, 255, 0.13), transparent 35%),
+        linear-gradient(145deg, #24243b, #151523);
+}
+
+#projects .project-art .art-guide,
+#projects .project-art .art-panel-line {
+    stroke: rgba(215, 205, 244, 0.13);
+}
+
+#projects .project-art .art-flow-line {
+    stroke: #7fe0d1;
+    stroke-width: 2.4;
+    filter: drop-shadow(0 0 4px rgba(127, 224, 209, 0.32));
+}
+
+#projects .project-art .art-point {
+    fill: #171725;
+    stroke: #f0b35b;
+    stroke-width: 2;
+}
+
+#projects .project-art .art-point-muted {
+    fill: #77718d;
+}
+
+#projects .project-art .art-model-line {
+    stroke: rgba(197, 165, 255, 0.5);
+}
+
+#projects .project-art .art-table {
+    fill: rgba(127, 224, 209, 0.12);
+    stroke: #7fe0d1;
+}
+
+#projects .project-art .art-table-subtle {
+    fill: rgba(255, 255, 255, 0.035);
+    stroke: rgba(215, 205, 244, 0.28);
+}
+
+#projects .project-art .art-table-mark {
+    stroke: #c5a5ff;
+}
+
+#projects .project-art .art-panel {
+    fill: rgba(255, 255, 255, 0.025);
+    stroke: rgba(215, 205, 244, 0.22);
+}
+
+#projects .project-art .art-chart-bar {
+    fill: rgba(197, 165, 255, 0.38);
+}
+
+#projects .project-art .art-chart-bar:nth-of-type(4) {
+    fill: #7fe0d1;
+}
+
+#projects .project-card > .project-content > .mono-label {
+    color: #f0b35b;
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+}
+
+#projects .project-content h3 {
+    margin-top: 0.7rem;
+    color: #f5f1e9;
+    font-family: var(--font-main);
+    font-size: clamp(1.05rem, 1.8vw, 1.24rem);
+    font-weight: 600;
+    letter-spacing: -0.045em;
+    line-height: 1.25;
+}
+
+#projects .project-desc {
+    color: #b7b2c5;
+    font-size: 0.82rem;
+    line-height: 1.65;
+}
+
+#projects .project-metrics {
+    margin-top: 1rem;
+    color: #cbc5d5;
+    font-size: 0.76rem;
+    line-height: 1.55;
+}
+
+#projects .project-metrics strong {
+    color: #f5f1e9;
+}
+
+#projects .tech-stack {
+    gap: 0.4rem;
+    margin-top: 1.15rem;
+}
+
+#projects .tech-stack span {
+    border-color: rgba(127, 224, 209, 0.2);
+    background: rgba(127, 224, 209, 0.055);
+    color: #9edbd2;
+    font-size: 0.59rem;
+}
+
+/* Decision workflow: turn the process into a living signal path. */
+#mindset {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 18% 70%, rgba(240, 179, 91, 0.075), transparent 28rem),
+        radial-gradient(ellipse at 85% 20%, rgba(127, 224, 209, 0.06), transparent 30rem),
+        #11111d;
+}
+
+#mindset::before {
+    position: absolute;
+    top: 8rem;
+    right: -9rem;
+    width: 26rem;
+    height: 26rem;
+    border: 1px solid rgba(197, 165, 255, 0.1);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3rem rgba(197, 165, 255, 0.025), 0 0 0 7rem rgba(197, 165, 255, 0.018);
+    content: "";
+    pointer-events: none;
+}
+
+#mindset .section-subtitle {
+    max-width: 700px;
+    color: #aaa5bb;
+}
+
+#mindset .architecture-flow {
+    position: relative;
+    z-index: 1;
+    gap: 0.7rem;
+    align-items: stretch;
+}
+
+#mindset .architecture-flow::before {
+    position: absolute;
+    top: 50%;
+    right: 7%;
+    left: 7%;
+    height: 1px;
+    background: linear-gradient(90deg, #f0b35b, #c5a5ff 48%, #7fe0d1);
+    box-shadow: 0 0 14px rgba(197, 165, 255, 0.24);
+    content: "";
+    opacity: 0.48;
+}
+
+#mindset .arch-line {
+    position: relative;
+    z-index: 2;
+    width: clamp(22px, 4vw, 58px);
+    height: 2px;
+    align-self: center;
+    background: linear-gradient(90deg, #f0b35b, #c5a5ff);
+    box-shadow: 0 0 12px rgba(197, 165, 255, 0.28);
+}
+
+#mindset .arch-node {
+    position: relative;
+    z-index: 2;
+    min-height: 225px;
+    justify-content: flex-start;
+    padding: 1.4rem;
+    overflow: hidden;
+    border-color: rgba(215, 205, 244, 0.17);
+    background:
+        linear-gradient(145deg, rgba(38, 37, 62, 0.94), rgba(22, 22, 37, 0.94));
+}
+
+#mindset .arch-node::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #f0b35b, #c5a5ff, #7fe0d1);
+    content: "";
+    transform: scaleX(0.25);
+    transform-origin: left;
+    transition: transform 320ms ease;
+}
+
+#mindset .arch-node:hover::before {
+    transform: scaleX(1);
+}
+
+#mindset .arch-node::after {
+    position: absolute;
+    right: -2rem;
+    bottom: -3rem;
+    width: 8rem;
+    height: 8rem;
+    border: 1px solid rgba(127, 224, 209, 0.12);
+    border-radius: 50%;
+    content: "";
+}
+
+#mindset .node-icon {
+    width: 48px;
+    height: 48px;
+    border-color: rgba(197, 165, 255, 0.26);
+    border-radius: 14px;
+    background: linear-gradient(145deg, rgba(197, 165, 255, 0.14), rgba(127, 224, 209, 0.08));
+    color: #c5a5ff;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+}
+
+#mindset .node-icon svg {
+    width: 25px;
+    height: 25px;
+}
+
+#mindset .arch-node:nth-of-type(3) .node-icon,
+#mindset .arch-node:nth-of-type(3) .node-icon {
+    color: #7fe0d1;
+}
+
+#mindset .arch-node h4 {
+    margin-top: 1.15rem;
+    color: #f5f1e9;
+    font-size: 1.08rem;
+}
+
+#mindset .arch-node .mono-tech {
+    color: #b7b2c5;
+    font-size: 0.66rem;
+    line-height: 1.8;
+}
+
+#mindset .arch-node:first-child .mono-tech:first-of-type,
+#mindset .arch-node:last-child .mono-tech:first-of-type {
+    color: #f0b35b;
+}
+
+/* Skill visual: use the same dark instrument-panel language as the project gallery. */
+#skills {
+    background:
+        radial-gradient(ellipse at 90% 30%, rgba(197, 165, 255, 0.06), transparent 30rem),
+        #181827;
+}
+
+#skills .showcase-panel,
+#skills .showcase-stat {
+    border-color: rgba(215, 205, 244, 0.15);
+    background:
+        radial-gradient(circle at 90% 0%, rgba(127, 224, 209, 0.1), transparent 40%),
+        linear-gradient(145deg, rgba(35, 35, 58, 0.94), rgba(21, 21, 36, 0.94));
+}
+
+#skills .showcase-header {
+    color: #aaa5bb;
+}
+
+#skills .showcase-status {
+    color: #f5f1e9;
+}
+
+#skills .showcase-visual {
+    border: 1px solid rgba(215, 205, 244, 0.13);
+    background: linear-gradient(180deg, #24243b, #151523);
+}
+
+#skills .showcase-stat strong {
+    color: #f5f1e9;
+}
+
+#skills .showcase-stat span {
+    color: #aaa5bb;
+}
+
+#skills .skill-category {
+    border-color: rgba(215, 205, 244, 0.15);
+    background: linear-gradient(145deg, rgba(35, 35, 58, 0.9), rgba(22, 22, 37, 0.88));
+}
+
+#skills .skill-category:hover {
+    border-color: rgba(127, 224, 209, 0.35);
+}
+
+#contact .contact-container {
+    border-color: rgba(197, 165, 255, 0.22);
+    background:
+        radial-gradient(ellipse at 90% 0%, rgba(240, 179, 91, 0.2), transparent 42%),
+        linear-gradient(135deg, #30294b, #171725);
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
+}
+
+#contact .contact-container .hero-title,
+#contact .contact-container .hero-summary {
+    color: #f5f1e9;
+}
+
+#contact .contact-container .btn-primary {
+    border-color: #c5a5ff;
+    background: #c5a5ff;
+    color: #171323;
+}
+
+#contact .contact-container .btn-primary:hover {
+    background: #d7c2ff;
+}
+
+#contact .contact-info,
+#contact .contact-info .mono-label {
+    color: #b7b2c5;
+}
+
+footer {
+    background: #0d0d17;
+}
+
+@media (max-width: 760px) {
+    .nav-container.nav-open .nav-menu {
+        border-color: rgba(215, 205, 244, 0.16);
+        background: rgba(17, 17, 29, 0.98);
+        box-shadow: 0 18px 30px rgba(0, 0, 0, 0.3);
+    }
+}
+
+@media (max-width: 800px) {
+    .journey-heading,
+    .knowledge-panel {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .career-map {
+        min-height: 900px;
+    }
+
+    .career-route {
+        top: 190px;
+        left: 10%;
+        width: 80%;
+        height: 550px;
+        transform: rotate(90deg);
+    }
+
+    .career-milestones {
+        inset: 1rem;
+    }
+
+    .career-card {
+        width: min(255px, 72%);
+    }
+
+    .career-card-one { top: 1rem; left: 0; }
+    .career-card-two { top: 215px; right: 0; bottom: auto; }
+    .career-card-three { top: 430px; right: auto; left: 0; }
+    .career-card-four { right: 0; bottom: 1rem; }
+
+    #mindset .architecture-flow::before {
+        display: none;
+    }
+
+    #mindset .arch-line {
+        display: none;
+    }
+}
+
+@media (max-width: 560px) {
+    .career-map {
+        min-height: 1020px;
+    }
+
+    .career-route {
+        opacity: 0.6;
+        left: -6%;
+        width: 112%;
+    }
+
+    .career-card {
+        width: 82%;
+    }
+
+    .career-card-two,
+    .career-card-four {
+        right: 0;
+    }
+}
+
+@media (max-width: 760px) {
+    .hero-detail {
+        padding: 0.85rem 0.8rem;
+        border: 1px solid rgba(197, 165, 255, 0.2);
+        border-radius: 13px;
+        background: rgba(17, 17, 29, 0.7);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .route-line,
+    .route-pulse {
+        animation: none;
+    }
+
+    .career-card:hover,
+    .knowledge-link:hover {
+        transform: none;
+    }
+
+    #mindset .arch-node::before {
+        transition: none;
+    }
+}
+
+/* Final contrast pass: keep every surface inside the midnight visual system. */
+#hero {
+    background:
+        radial-gradient(ellipse at 82% 25%, rgba(197, 165, 255, 0.1), transparent 30rem),
+        radial-gradient(ellipse at 12% 8%, rgba(240, 179, 91, 0.06), transparent 25rem),
+        var(--bg-main);
+}
+
+#hero::before {
+    border-color: rgba(197, 165, 255, 0.11);
+    background: radial-gradient(circle, rgba(197, 165, 255, 0.055), transparent 68%);
+}
+
+.portrait-frame::after {
+    display: none;
+}
+
+.portrait-image {
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 72%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 0%, #000 72%, transparent 100%);
+}
+
+.hero-status {
+    border-color: rgba(197, 165, 255, 0.25);
+    background: rgba(27, 27, 43, 0.75);
+    color: var(--accent-primary);
+}
+
+.status-dot {
+    background: #7fe0d1;
+    box-shadow: 0 0 0 4px rgba(127, 224, 209, 0.12);
+}
+
+.hero-summary {
+    color: var(--text-secondary);
+}
+
+.hero-detail {
+    padding: 1.1rem 1rem 1rem 1.2rem;
+    border-left: 1px solid rgba(197, 165, 255, 0.3);
+    border-radius: 0 14px 14px 0;
+    background: linear-gradient(90deg, rgba(17, 17, 29, 0.78), rgba(17, 17, 29, 0.28));
+    backdrop-filter: blur(3px);
+}
+
+.hero-credentials {
+    border-color: rgba(197, 165, 255, 0.18);
+    color: var(--text-muted);
+}
+
+.hero-work-link {
+    color: var(--text-primary);
+}
+
+.btn-secondary {
+    border-color: rgba(215, 205, 244, 0.2);
+    background: rgba(255, 255, 255, 0.035);
+    color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+    border-color: rgba(197, 165, 255, 0.55);
+    background: rgba(197, 165, 255, 0.1);
+}
+
+#about,
+#experience,
+#mindset,
+#skills,
+#credentials,
+#contact {
+    background:
+        radial-gradient(ellipse at 100% 0%, rgba(197, 165, 255, 0.055), transparent 32rem),
+        var(--bg-alt);
+}
+
+#journey {
+    background:
+        radial-gradient(ellipse at 8% 50%, rgba(240, 179, 91, 0.07), transparent 30rem),
+        #11111d;
+}
+
+.section-title,
+.timeline-content h3,
+.skill-category h3,
+.exp-header h3 {
+    color: var(--text-primary);
+}
+
+.section-title::after {
+    background: linear-gradient(90deg, var(--accent-secondary), rgba(240, 179, 91, 0));
+}
+
+.stat-card,
+.experience-card,
+.project-card,
+.skill-category,
+.arch-node,
+.timeline-content {
+    border-color: rgba(215, 205, 244, 0.15);
+    background: linear-gradient(145deg, rgba(35, 35, 58, 0.84), rgba(22, 22, 37, 0.82));
+    box-shadow: 0 22px 65px rgba(0, 0, 0, 0.2);
+}
+
+.stat-card:hover,
+.skill-category:hover,
+.arch-node:hover,
+.timeline-content:hover,
+.experience-card:hover,
+.project-card:hover {
+    border-color: rgba(197, 165, 255, 0.42);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.28);
+}
+
+.stat-label,
+.timeline-content p,
+.exp-overview,
+.exp-bullets,
+.project-desc,
+.project-metrics,
+.section-subtitle {
+    color: var(--text-secondary);
+}
+
+.timeline-item .mono-label,
+.exp-header .mono-label {
+    border-color: rgba(197, 165, 255, 0.22);
+    background: rgba(197, 165, 255, 0.08);
+}
+
+.exp-header {
+    border-color: rgba(215, 205, 244, 0.14);
+}
+
+.exp-bullets li::marker,
+.project-metrics li::marker {
+    color: var(--accent-secondary);
+}
+
+.badge,
+.tech-stack span {
+    border-color: rgba(215, 205, 244, 0.16);
+    background: rgba(255, 255, 255, 0.045);
+    color: var(--text-secondary);
+}
+
+.badge-award {
+    border-color: rgba(240, 179, 91, 0.3);
+    background: rgba(240, 179, 91, 0.08);
+    color: #f0c47c;
+}
+
+.showcase-panel,
+.showcase-stat {
+    border-color: rgba(215, 205, 244, 0.15);
+    background:
+        radial-gradient(circle at top right, rgba(197, 165, 255, 0.12), transparent 38%),
+        linear-gradient(145deg, rgba(35, 35, 58, 0.9), rgba(22, 22, 37, 0.86));
+}
+
+.showcase-visual {
+    background: linear-gradient(180deg, rgba(31, 31, 51, 0.9), rgba(20, 20, 34, 0.96));
+}
+
+.showcase-outline {
+    fill: rgba(255, 255, 255, 0.035);
+    stroke: rgba(197, 165, 255, 0.28);
+}
+
+.showcase-gridline {
+    stroke: rgba(197, 165, 255, 0.12);
+}
+
+.showcase-curve {
+    stroke: #7fe0d1;
+}
+
+.showcase-point {
+    fill: #1b1b2b;
+    stroke: #7fe0d1;
+}
+
+.showcase-bar {
+    fill: rgba(197, 165, 255, 0.3);
+}
+
+.showcase-bar.alt {
+    fill: rgba(240, 179, 91, 0.7);
+}
+
+.knowledge-copy,
+.knowledge-link {
+    border-color: rgba(215, 205, 244, 0.15);
+}
+
+footer {
+    border-color: rgba(215, 205, 244, 0.14);
+}
+
     </style>
 </head>
 <body>
@@ -3317,7 +4366,7 @@ footer .footer-right {
                 <li><a href="#about" class="nav-link">Perspective</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#projects" class="nav-link">Work</a></li>
-                <li><a href="#mentorship" class="nav-link">Mentoring</a></li>
+                <li><a href="#credentials" class="nav-link">Knowledge hub</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
@@ -3331,21 +4380,28 @@ footer .footer-right {
                 <div class="portrait-frame">
                     <img class="portrait-image" src="portfolioImage.png" alt="Portrait of Purnaditya Suvvari">
                 </div>
+                <div class="tool-orbit" aria-hidden="true">
+                    <span class="orbit-tool orbit-powerbi">Power BI</span>
+                    <span class="orbit-tool orbit-sql">SQL</span>
+                    <span class="orbit-tool orbit-fabric">Fabric</span>
+                    <span class="orbit-tool orbit-excel">Excel</span>
+                    <span class="orbit-tool orbit-azure">Azure</span>
+                </div>
             </div>
             <div class="hero-content">
                 <div class="hero-copy">
-                    <p class="hero-status"><span class="status-dot"></span> DATA ANALYTICS <span aria-hidden="true">&middot;</span> POWER BI <span aria-hidden="true">&middot;</span> BUSINESS INTELLIGENCE</p>
-                    <h1 class="hero-title">I turn complex data into <span>clear, confident decisions.</span></h1>
+                    <p class="hero-status"><span class="status-dot"></span> DATA ANALYST <span aria-hidden="true">&middot;</span> POWER BI DEVELOPER <span aria-hidden="true">&middot;</span> AVIATION DATA</p>
+                    <h1 class="hero-title">From mechanical systems to <span>decision-ready data.</span></h1>
                 </div>
                 <div class="hero-detail">
                     <p class="hero-summary">
-                        I build thoughtful Power BI and analytics solutions, combining 3 years of hands-on experience with design thinking and an MBA in Finance.
+                        I build practical Power BI, SQL, and Python solutions for teams that need reliable answers—not just more reports. My path started in Mechanical Engineering and grew through aviation analytics, an MBA in Finance, and hands-on work with Microsoft data tools.
                     </p>
                     <div class="hero-cta">
                         <a href="#projects" class="btn btn-primary">Explore my work <span aria-hidden="true">&darr;</span></a>
                         <a href="mailto:purnadityasuvvari@gmail.com" class="hero-work-link">Let’s connect <span aria-hidden="true">&nearr;</span></a>
                     </div>
-                    <p class="hero-credentials">3 YEARS IN ANALYTICS <span aria-hidden="true">&middot;</span> POWER BI <span aria-hidden="true">&middot;</span> MBA FINANCE</p>
+                    <p class="hero-credentials">3+ YEARS IN ANALYTICS <span aria-hidden="true">&middot;</span> DP-600 CERTIFIED <span aria-hidden="true">&middot;</span> MBA FINANCE</p>
                 </div>
             </div>
         </div>
@@ -3354,29 +4410,29 @@ footer .footer-right {
     <!-- About Section -->
     <section id="about" class="section reveal">
         <div class="container">
-            <h2 class="section-title">The person behind the dashboards</h2>
+            <h2 class="section-title">A systems thinker with a people-first lens</h2>
             <div class="about-grid">
                 <div class="about-text">
-                    <p>I’m a data analytics and Power BI developer with <strong>3 years of experience</strong> turning business questions into useful, trusted reporting. I build dashboards and data models that help teams see what matters and decide what to do next.</p>
-                    <p>My MBA in Finance helps me connect performance measures to business outcomes. Design thinking and UI/UX keep the experience grounded in the people using the insight, while project management helps move ideas into delivery.</p>
-                    <p>My professional experience also includes aviation, where domain knowledge helps put operational data in context. I’m now looking to bring my analytics, reporting, and problem-solving skills to broader data-focused roles.</p>
+                    <p>I began with a <strong>Mechanical Engineering</strong> degree, where structured problem-solving and systems thinking shaped how I work. Today, I apply that foundation to aviation and enterprise analytics—turning complex operational data into clear views for the people who act on it.</p>
+                    <p>My <strong>MBA in Finance</strong> helps me connect measures to business outcomes. UI/UX interest keeps my dashboards calm and usable, while Power BI, SQL, Python, and Microsoft Fabric help me build the underlying logic with care.</p>
+                    <p>I’m also exploring practical uses of <strong>AI and agentic AI</strong> for analysis and workflow improvement—without losing sight of data quality, governance, and the human decision behind every metric.</p>
                 </div>
                 <div class="about-stats">
                     <div class="stat-card">
-                        <h3 class="stat-number">3 yrs</h3>
-                        <p class="stat-label">Analytics &amp; Power BI development</p>
+                        <h3 class="stat-number">3+</h3>
+                        <p class="stat-label">Years in analytics &amp; BI</p>
                     </div>
                     <div class="stat-card">
-                        <h3 class="stat-number">15+</h3>
-                        <p class="stat-label">Production dashboards delivered</p>
+                        <h3 class="stat-number">33M+</h3>
+                        <p class="stat-label">Audit records modeled</p>
                     </div>
                     <div class="stat-card">
-                        <h3 class="stat-number">60%</h3>
-                        <p class="stat-label">Less manual work through automation</p>
+                        <h3 class="stat-number">100K</h3>
+                        <p class="stat-label">Users across access data</p>
                     </div>
                     <div class="stat-card">
-                        <h3 class="stat-number">MBA</h3>
-                        <p class="stat-label">Finance</p>
+                        <h3 class="stat-number">5d → 2h</h3>
+                        <p class="stat-label">Reporting turnaround</p>
                     </div>
                 </div>
             </div>
@@ -3386,39 +4442,56 @@ footer .footer-right {
     <!-- Career Journey -->
     <section id="journey" class="section reveal">
         <div class="container">
-            <h2 class="section-title">How I turn questions into insight</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="mono-label">01 / Understand</span>
-                        <h3>Start with the business question</h3>
-                        <p>Clarify what teams need to understand and the decisions the data should support, using domain knowledge where it adds context.</p>
-                    </div>
+            <div class="journey-heading">
+                <div>
+                    <p class="mono-label">CAREER SYSTEMS MAP / 2019 — NOW</p>
+                    <h2 class="section-title">The path from engineer to analyst</h2>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="mono-label">02 / Design</span>
-                        <h3>People-first problem framing</h3>
-                        <p>Use design thinking to understand stakeholder needs and shape the right question before shaping the report.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="mono-label">03 / Analyze</span>
-                        <h3>Build meaningful analytics</h3>
-                        <p>Use Power BI, SQL, data modeling, and financial context to make performance clear and actionable.</p>
-                    </div>
-                </div>
-                <div class="timeline-item current">
-                    <div class="timeline-dot pulse"></div>
-                    <div class="timeline-content">
-                        <span class="mono-label accent-text">04 / Deliver</span>
-                        <h3>Make insight useful</h3>
-                        <p>Manage delivery, communicate findings, and help teams build confidence using data.</p>
-                    </div>
+                <p class="journey-intro">A technical foundation, sharpened by business context, and translated into analytics people can use.</p>
+            </div>
+            <div class="career-map">
+                <div class="career-map-grid" aria-hidden="true"></div>
+                <svg class="career-route" viewBox="0 0 1000 300" role="img" aria-label="Animated route showing the progression from mechanical engineering to analytics">
+                    <defs>
+                        <linearGradient id="route-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#f0b35b"/>
+                            <stop offset="52%" stop-color="#c5a5ff"/>
+                            <stop offset="100%" stop-color="#7fe0d1"/>
+                        </linearGradient>
+                    </defs>
+                    <path class="route-shadow" d="M75 220 C180 78, 290 245, 405 115 S620 55, 705 175 S850 245, 930 72"/>
+                    <path class="route-line" pathLength="1" d="M75 220 C180 78, 290 245, 405 115 S620 55, 705 175 S850 245, 930 72"/>
+                    <circle class="route-node" cx="75" cy="220" r="8"/>
+                    <circle class="route-node" cx="330" cy="175" r="8"/>
+                    <circle class="route-node" cx="625" cy="105" r="8"/>
+                    <circle class="route-node route-node-current" cx="930" cy="72" r="8"/>
+                    <circle class="route-pulse" cx="930" cy="72" r="18"/>
+                </svg>
+                <div class="career-milestones">
+                    <article class="career-card career-card-one">
+                        <span class="career-index">01 / FOUNDATION</span>
+                        <h3>Mechanical engineering mindset</h3>
+                        <p>Breaking complex systems into measurable parts, tracing causes, and solving problems with discipline.</p>
+                        <span class="career-tag">Systems thinking</span>
+                    </article>
+                    <article class="career-card career-card-two">
+                        <span class="career-index">02 / CONTEXT</span>
+                        <h3>Finance meets aviation</h3>
+                        <p>Adding commercial perspective through an MBA in Finance and real-world engine program experience.</p>
+                        <span class="career-tag">Business fluency</span>
+                    </article>
+                    <article class="career-card career-card-three">
+                        <span class="career-index">03 / BUILD</span>
+                        <h3>Data becomes a product</h3>
+                        <p>Combining SQL, Python, star schemas, DAX, and Power Query into reliable decision tools.</p>
+                        <span class="career-tag">Analytics craft</span>
+                    </article>
+                    <article class="career-card career-card-four">
+                        <span class="career-index">04 / EVOLVE</span>
+                        <h3>Analytics with an AI horizon</h3>
+                        <p>Exploring Fabric, AI, and agentic workflows while keeping usability, trust, and governance central.</p>
+                        <span class="career-tag career-tag-current">Now building</span>
+                    </article>
                 </div>
             </div>
         </div>
@@ -3431,22 +4504,23 @@ footer .footer-right {
             <div class="experience-card">
                 <div class="exp-header">
                     <div>
-                        <h3>Power BI Developer | Enterprise Analytics</h3>
-                        <p class="exp-location">Hyderabad, IN</p>
+                        <h3>Reliability Analyst · Pratt &amp; Whitney GTF Engine Programs</h3>
+                        <p class="exp-location">Cyient Ltd. · Hyderabad, India</p>
                     </div>
-                    <span class="mono-label">3 Years</span>
+                    <span class="mono-label">Oct 2023 — Present</span>
                 </div>
-                <p class="exp-overview">Turned complex business and operational data into dependable reporting—combining Power BI development, SQL optimization, automation, and thoughtful data modeling. My aviation experience also gives me first-hand context for operational metrics and reporting needs.</p>
+                <p class="exp-overview">Analytics practitioner and backup team lead delivering Power BI reporting, data models, and operational analysis for aviation programs and an enterprise access-governance platform.</p>
                 <ul class="exp-bullets">
-                    <li>Built and optimized SQL queries, stored procedures, and T-SQL scripts; <strong>improved query performance by 40-50%</strong> through indexing and execution plan analysis.</li>
-                    <li>Developed automated data refresh mechanisms using Power Automate, orchestrating pipelines from source to BI, <strong>reducing manual intervention by 60%</strong>.</li>
-                    <li>Architected data models following star schema best practices for complex hierarchical analytics.</li>
-                    <li>Delivered 15+ production dashboards supporting 100+ users across multiple enterprise departments.</li>
-                    <li>Implemented row-level security (RLS) and compliance frameworks for data governance.</li>
+                    <li>Architected and maintain a <strong>star-schema model</strong> across users, groups, sites, roles, files, and access-audit fact and bridge tables.</li>
+                    <li>Support reporting across <strong>~100K users and 33M+ audit actions</strong> using direct SQL Server connectivity, Power Query, and DAX.</li>
+                    <li>Partner with Pratt &amp; Whitney executives to gather requirements, validate metrics, identify data gaps, and present KPI performance in weekly and monthly reviews.</li>
+                    <li>Automated billing, KPI, and recurring reporting workflows with Power BI, Excel/VBA, Power Automate, and SharePoint—cutting turnaround from <strong>5 days to ~2 hours</strong> and saving <strong>200+ hours annually</strong>.</li>
+                    <li>Perform spare-provisioning gap analysis across <strong>~20 global airline accounts</strong>; maintain audit-ready trackers and mentor teammates on reporting standards.</li>
                 </ul>
                 <div class="exp-awards">
-                    <span class="badge badge-award">🏆 Valuable Performer Award (2024)</span>
-                    <span class="badge badge-award">🏆 Productivity Savings Champion (2025)</span>
+                    <span class="badge badge-award">Backup Team Lead</span>
+                    <span class="badge badge-award">Executive stakeholder partner</span>
+                    <span class="badge badge-award">Zero major customer escalations</span>
                 </div>
             </div>
         </div>
@@ -3460,14 +4534,14 @@ footer .footer-right {
             
             <div class="filter-container">
                 <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="engineering">Data Engineering / Pipelines</button>
-                <button class="filter-btn" data-filter="modeling">SQL & Modeling</button>
+                <button class="filter-btn" data-filter="engineering">Data &amp; pipelines</button>
+                <button class="filter-btn" data-filter="modeling">Models &amp; SQL</button>
                 <button class="filter-btn" data-filter="analytics">Analytics & BI</button>
             </div>
 
             <div class="projects-grid">
                 <!-- Project 1 -->
-                <div class="project-card" data-category="engineering analytics">
+                <div class="project-card" data-category="engineering analytics modeling">
                     <div class="project-content">
                         <svg class="project-art project-art-flow" viewBox="0 0 360 112" aria-hidden="true">
                             <path class="art-guide" d="M20 88H340M20 56H340M20 24H340"/>
@@ -3478,24 +4552,24 @@ footer .footer-right {
                             <circle class="art-point" cx="253" cy="33" r="4"/>
                             <circle class="art-point" cx="332" cy="23" r="4"/>
                         </svg>
-                        <span class="mono-label">Automation & Pipeline</span>
-                        <h3>Automated KPI Refresh Pipeline</h3>
-                        <p class="project-desc">Architected an end-to-end automated data refresh solution combining Power Automate, scheduled refreshes, and SQL Server jobs to ingest data from multiple systems.</p>
+                        <span class="mono-label">Executive analytics · Current</span>
+                        <h3>EngineWise Connect</h3>
+                        <p class="project-desc">Building executive Power BI analytics for a centralized engine records, utilization, access-control, and audit platform hosted on Azure SQL.</p>
                         <ul class="project-metrics">
-                            <li>Latency reduced from <strong>4 hours to 15 minutes</strong></li>
-                            <li>Manual operations <strong>reduced by 60%</strong></li>
+                            <li>Modeling <strong>50K+ users and 33M+ audit records</strong></li>
+                            <li>Reusable SQL views, Python cleansing, validation, and DAX KPI logic</li>
                         </ul>
                         <div class="tech-stack">
-                            <span>Power Automate</span>
-                            <span>SQL Server</span>
-                            <span>T-SQL</span>
                             <span>Power BI</span>
+                            <span>Azure SQL</span>
+                            <span>Python</span>
+                            <span>Microsoft Fabric</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="project-card" data-category="modeling analytics">
+                <div class="project-card" data-category="analytics modeling">
                     <div class="project-content">
                         <svg class="project-art project-art-model" viewBox="0 0 360 112" aria-hidden="true">
                             <path class="art-model-line" d="M180 56 91 27M180 56 269 27M180 56 91 85M180 56 269 85"/>
@@ -3510,22 +4584,24 @@ footer .footer-right {
                             <circle class="art-point" cx="239" cy="85" r="3"/>
                             <path class="art-table-mark" d="M157 50h46M157 59h31"/>
                         </svg>
-                        <span class="mono-label">Data Warehousing</span>
-                        <h3>Supply Chain Analytics Data Model</h3>
-                        <p class="project-desc">Designed a dimensional data warehouse supporting supply chain analytics. Created complex fact and dimension tables, optimizing SQL queries for strategic inventory planning.</p>
+                        <span class="mono-label">Reliability intelligence</span>
+                        <h3>FIRM Fleet Insights Dashboard</h3>
+                        <p class="project-desc">Enterprise Power BI dashboard consolidating fleet reliability, shop-visit history, engine serial numbers, and case-level information for engineering and business stakeholders.</p>
                         <ul class="project-metrics">
-                            <li>Generated <strong>100-150 hours/year</strong> in time savings</li>
+                            <li>Drill-down views across <strong>ESN and Case ID</strong></li>
+                            <li>SQL, Power Query, relationships, and validation</li>
                         </ul>
                         <div class="tech-stack">
-                            <span>SQL Server</span>
-                            <span>Star Schema</span>
                             <span>Power BI</span>
+                            <span>SQL</span>
+                            <span>Power Query</span>
+                            <span>Aviation data</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 3 -->
-                <div class="project-card" data-category="analytics">
+                <div class="project-card" data-category="analytics modeling">
                     <div class="project-content">
                         <svg class="project-art project-art-dashboard" viewBox="0 0 360 112" aria-hidden="true">
                             <rect class="art-panel" x="30" y="12" width="300" height="88" rx="8"/>
@@ -3539,16 +4615,17 @@ footer .footer-right {
                             <path class="art-panel-line" d="M166 84h136"/>
                             <circle class="art-point" cx="239" cy="46" r="4"/>
                         </svg>
-                        <span class="mono-label">Governance & BI</span>
-                        <h3>Enterprise Compliance Dashboard</h3>
-                        <p class="project-desc">Consolidated data from 5+ disparate source systems with advanced Power Query transformations and dynamic DAX logic to track 50+ compliance KPIs.</p>
+                        <span class="mono-label">Independent project</span>
+                        <h3>Retail Customer Behavior &amp; Sales</h3>
+                        <p class="project-desc">Analyzed ~4K customers with Python and SQL Server, then translated the findings into a Power BI dashboard for category, demographic, and subscription decisions.</p>
                         <ul class="project-metrics">
-                            <li>Manual reporting time <strong>reduced by 40-50%</strong></li>
+                            <li>Clothing led revenue at approximately <strong>₹104K</strong></li>
+                            <li><strong>73%</strong> of customers were non-subscribers</li>
                         </ul>
                         <div class="tech-stack">
-                            <span>Power Query M</span>
-                            <span>DAX</span>
-                            <span>Row-Level Security</span>
+                            <span>Python / Pandas</span>
+                            <span>SQL Server</span>
+                            <span>Power BI</span>
                         </div>
                     </div>
                 </div>
@@ -3649,16 +4726,16 @@ footer .footer-right {
                 </div>
                 <div class="showcase-stat-stack">
                     <div class="showcase-stat">
-                        <strong>15+</strong>
-                        <span>Dashboards shipped</span>
+                        <strong>33M+</strong>
+                        <span>Audit records modeled</span>
                     </div>
                     <div class="showcase-stat">
-                        <strong>60%</strong>
-                        <span>Manual work cut</span>
+                        <strong>5d → 2h</strong>
+                        <span>Reporting turnaround</span>
                     </div>
                     <div class="showcase-stat">
-                        <strong>40-50%</strong>
-                        <span>Query improvement</span>
+                        <strong>200+</strong>
+                        <span>Hours saved yearly</span>
                     </div>
                 </div>
             </div>
@@ -3671,7 +4748,8 @@ footer .footer-right {
                         <span class="badge">T-SQL</span>
                         <span class="badge">Data Modeling</span>
                         <span class="badge">Star Schema</span>
-                        <span class="badge">Stored Procedures</span>
+                        <span class="badge">CTEs &amp; views</span>
+                        <span class="badge">Fact / bridge tables</span>
                     </div>
                 </div>
 
@@ -3681,8 +4759,8 @@ footer .footer-right {
                         <span class="badge">Power BI</span>
                         <span class="badge">DAX</span>
                         <span class="badge">Power Query M</span>
-                        <span class="badge">Row-Level Security</span>
-                        <span class="badge">Advanced Excel</span>
+                        <span class="badge">Time intelligence</span>
+                        <span class="badge">Advanced Excel &amp; VBA</span>
                     </div>
                 </div>
 
@@ -3692,8 +4770,8 @@ footer .footer-right {
                         <span class="badge">Python (Data Processing)</span>
                         <span class="badge">Power Automate</span>
                         <span class="badge">VBA Macros</span>
-                        <span class="badge">Git</span>
-                        <span class="badge">Project Management</span>
+                        <span class="badge">Microsoft Fabric</span>
+                        <span class="badge">AI &amp; agentic AI</span>
                     </div>
                 </div>
 
@@ -3702,9 +4780,10 @@ footer .footer-right {
                     <div class="skill-badges">
                         <span class="badge badge-outline">Aviation domain knowledge</span>
                         <span class="badge badge-outline">MBA Finance</span>
-                        <span class="badge badge-outline">Design Thinking</span>
-                        <span class="badge badge-outline">UI/UX</span>
-                        <span class="badge badge-outline">Mentoring</span>
+                        <span class="badge badge-outline">Design thinking</span>
+                        <span class="badge badge-outline">UI/UX interest</span>
+                        <span class="badge badge-outline">Backup team lead</span>
+                        <span class="badge badge-outline">DP-600 certified</span>
                     </div>
                 </div>
 
@@ -3712,15 +4791,19 @@ footer .footer-right {
         </div>
     </section>
 
-    <!-- Mentorship -->
-    <section id="mentorship" class="section reveal">
-        <div class="container mentorship-panel">
-            <div>
-                <p class="mono-label">MENTORING</p>
-                <h2 class="section-title">Sharing what I learn</h2>
-                <p class="mentorship-copy">I enjoy helping others build confidence with data and communicate their thinking.</p>
+    <!-- Credentials & Knowledge Hub -->
+    <section id="credentials" class="section reveal">
+        <div class="container knowledge-panel">
+            <div class="knowledge-copy">
+                <p class="mono-label">CREDENTIALS &amp; KNOWLEDGE HUB</p>
+                <h2 class="section-title">Grounded in business. Curious about what’s next.</h2>
+                <p>Microsoft Certified Fabric Analytics Engineer Associate (DP-600) · MBA Finance, Andhra University (2024–2026) · B.Tech Mechanical Engineering, SRKR Engineering College (2019–2024).</p>
             </div>
-            <a class="mentorship-link" href="https://freelance-portfolio-sigma-ten.vercel.app/" target="_blank" rel="noopener noreferrer">A little more of my work <span aria-hidden="true">&nearr;</span></a>
+            <a class="knowledge-link" href="https://freelance-portfolio-sigma-ten.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <span class="knowledge-link-top"><span class="knowledge-signal"></span> SHARING WHAT I LEARN</span>
+                <strong>Visit my knowledge-sharing space</strong>
+                <span class="knowledge-link-bottom">Notes, experiments, and practical ideas from the analytics journey <span aria-hidden="true">&nearr;</span></span>
+            </a>
         </div>
     </section>
 
@@ -3729,13 +4812,13 @@ footer .footer-right {
         <div id="resume" class="container contact-container">
             <h2 class="hero-title" style="font-size: 2.5rem; text-align: center;">Let’s make the next decision a better one.</h2>
             <p class="hero-summary" style="text-align: center; margin: 0 auto 2rem auto;">
-                I’m exploring data analytics and Power BI development roles where I can build useful reporting, support better decisions, and keep growing my data skills.
+                I’m open to Data Analyst, Business Analyst, Power BI Developer, and analytics-focused opportunities where I can build useful reporting and support better decisions.
             </p>
             
             <div class="contact-links">
                 <a href="mailto:purnadityasuvvari@gmail.com" class="btn btn-primary">Email Me</a>
                 <a href="https://linkedin.com/in/purnaditya-suvvari-6922aa244" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn</a>
-                <a href="assets/resume.pdf" class="btn btn-secondary" target="_blank">Download Resume</a>
+                <a href="Suvvari_Purnaditya_DataAnalyst_Resume.docx" class="btn btn-secondary" download="Suvvari_Purnaditya_DataAnalyst_Resume.docx">Download Resume</a>
             </div>
             
             <div class="contact-info">
