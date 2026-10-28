@@ -4608,6 +4608,132 @@ footer {
     border-color: rgba(215, 205, 244, 0.14);
 }
 
+/* Mobile journey map: keep the narrative path visible without crowding the cards. */
+@media (max-width: 760px) {
+    #journey .career-map {
+        position: relative;
+        background:
+            radial-gradient(circle at 88% 12%, rgba(127, 224, 209, 0.1), transparent 35%),
+            linear-gradient(145deg, rgba(35, 35, 58, 0.96), rgba(16, 16, 28, 0.98));
+    }
+
+    #journey .career-map::before {
+        position: absolute;
+        z-index: 1;
+        top: 2rem;
+        bottom: 2rem;
+        left: 1.42rem;
+        width: 1px;
+        background: linear-gradient(to bottom, #f0b35b, #c5a5ff 52%, #7fe0d1);
+        box-shadow: 0 0 12px rgba(197, 165, 255, 0.3);
+        content: "";
+    }
+
+    #journey .career-map::after {
+        position: absolute;
+        z-index: 1;
+        left: 1.25rem;
+        bottom: 1.1rem;
+        width: 0.4rem;
+        height: 0.4rem;
+        border-right: 1px solid #7fe0d1;
+        border-bottom: 1px solid #7fe0d1;
+        content: "";
+        transform: rotate(45deg);
+    }
+
+    #journey .career-route {
+        z-index: 0;
+        right: -4%;
+        width: 45%;
+        opacity: 0.14;
+    }
+
+    #journey .career-milestones {
+        z-index: 2;
+        position: relative;
+        display: grid;
+        gap: 0.8rem;
+        padding: 0.35rem 0.35rem 0.6rem 2.25rem;
+    }
+
+    #journey .career-card,
+    #journey .career-card:nth-child(even) {
+        width: 100%;
+        margin: 0;
+        padding: 1rem 1rem 1rem 1.1rem;
+        border-color: rgba(215, 205, 244, 0.2);
+        background: linear-gradient(145deg, rgba(36, 36, 59, 0.96), rgba(23, 23, 39, 0.96));
+        animation: journey-card-in 700ms both;
+    }
+
+    #journey .career-card::before {
+        position: absolute;
+        top: 1rem;
+        left: -1.72rem;
+        display: grid;
+        width: 1.05rem;
+        height: 1.05rem;
+        place-items: center;
+        border: 2px solid #f0b35b;
+        border-radius: 50%;
+        background: #171725;
+        color: #f0b35b;
+        content: "";
+        box-shadow: 0 0 0 5px rgba(240, 179, 91, 0.08);
+    }
+
+    #journey .career-card::after {
+        position: absolute;
+        top: 1.5rem;
+        left: -0.5rem;
+        width: 0.5rem;
+        height: 1px;
+        background: rgba(240, 179, 91, 0.65);
+        content: "";
+    }
+
+    #journey .career-card:nth-child(1)::before { content: "1"; }
+    #journey .career-card:nth-child(2)::before { content: "2"; border-color: #c5a5ff; color: #c5a5ff; }
+    #journey .career-card:nth-child(3)::before { content: "3"; border-color: #c5a5ff; color: #c5a5ff; }
+    #journey .career-card:nth-child(4)::before { content: "4"; border-color: #7fe0d1; color: #7fe0d1; box-shadow: 0 0 0 5px rgba(127, 224, 209, 0.08); }
+
+    #journey .career-card:nth-child(2) { animation-delay: 100ms; }
+    #journey .career-card:nth-child(3) { animation-delay: 200ms; }
+    #journey .career-card:nth-child(4) { animation-delay: 300ms; }
+
+    #journey .career-card:hover {
+        border-color: rgba(127, 224, 209, 0.45);
+        transform: translateX(3px);
+    }
+
+    #journey .career-card h3 {
+        font-size: 1rem;
+    }
+
+    #journey .career-card p {
+        font-size: 0.77rem;
+        line-height: 1.6;
+    }
+}
+
+@keyframes journey-card-in {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #journey .career-card {
+        animation: none;
+    }
+}
+
     </style>
 </head>
 <body>
